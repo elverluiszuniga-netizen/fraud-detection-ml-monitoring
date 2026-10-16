@@ -1,6 +1,6 @@
 # MLflow local and DagsHub setup
 
-Phase 3 is runnable locally without a remote repository or credentials. No remote was created, no push was performed and no external experiment link exists yet. DagsHub integration is prepared through MLflow environment variables; it was not connected or exercised remotely.
+Los experimentos de Fase 3 y las evaluaciones posteriores se ejecutaron originalmente en el entorno local. En Fase 7B se publicó su evidencia histórica en DagsHub sin reentrenamiento ni recálculo de métricas. El repositorio GitHub y el tracking remoto ya son accesibles; los comandos de reproducción de entrenamiento que siguen son históricos y no se necesitan para revisar la entrega.
 
 ## Reproduce the phase in PowerShell
 
@@ -32,13 +32,21 @@ uv run mlflow ui --backend-store-uri $trackingUri --host 127.0.0.1 --port 5000
 
 Open http://127.0.0.1:5000 in your browser and select `fraud-detection-hyperparameter-optimization`. The UI is local to this computer; it is not a public experiment link. Parent runs group each algorithm, nested child runs represent trials, best-trial runs reproduce and save the selected models, baseline reference runs import Phase 2 evidence without retraining, and a summary run contains comparison and champion rationale. `artifacts/phase3_run.json` lists the execution id, study names, run ids, count and experiment id. Reports can be regenerated without training using `build_phase3_report.py`.
 
-## Evidencia externa: pendiente de autorización
+## Evidencia histórica publicada en DagsHub
 
-DagsHub es una opción sugerida por la consigna, no un servicio conectado. No hay enlace externo real. Antes de publicar se requieren repositorio/endpoint verificados, acceso del usuario y autorización explícita. No guardar tokens en archivos/Git/artifacts ni imprimir variables de entorno.
+- [Experimento: 31 runs FINISHED](https://dagshub.com/elverl/fraud-detection-ml-monitoring.mlflow/#/experiments/0).
+- [Champion XGBoost](https://dagshub.com/elverl/fraud-detection-ml-monitoring.mlflow/#/experiments/0/runs/2adae7bc49f14c12a24fb18c2c87b60a).
+- [Informe de publicación](../PHASE_7B_DAGSHUB_PUBLICATION_REPORT.md), [IDs locales/remotos](../PHASE_7B_DAGSHUB_RUN_MAPPING.json) y [hashes de artifacts](../PHASE_7B_DAGSHUB_ARTIFACT_MANIFEST.json).
 
-Para Fase 7B, transferir los runs y artifacts **existentes**: inventariar 31 runs, verificar parámetros/métricas y modelos, exportar metadatos/artifacts sin CSV completo ni score arrays, importar al endpoint autorizado, documentar mapeo de IDs/linaje y verificar acceso del evaluador. Preservar el store local y hashes. Esa transferencia no está implementada ni ejecutada en Fase 7A; no sustituirla por `run_optimization.py --allow-remote-tracking`, porque ese comando reentrena.
+Cuenta DagsHub verificada: `elverl`, distinta del propietario GitHub `elverluiszuniga-netizen`. El experimento local `1` se corresponde con el remoto `0`; los 31 IDs de runs cambiaron y las 22 relaciones padre-hijo se reconstruyeron. Se conservaron nombres, tiempos históricos, 477 parámetros y los 617 registros completos de métricas, incluidos timestamp y step.
 
-Credenciales solo mediante variables de entorno de proceso con entrada segura y eliminación al terminar. La opción CLI de remote tracking protege futuros entrenamientos autorizados; no es mecanismo de publicación de resultados existentes. Si se elige otro hosting de evidencia MLflow, verificar de igual forma permisos y enlace real. No se inventan URLs.
+La transferencia usó el cliente instalado MLflow 3.16.1 contra el servidor 3.5.1 mediante APIs estándar, sin actualizar dependencias. El origen SQLite se abrió en modo de solo lectura; los datos se importaron como evidencia existente. No se ejecutaron los comandos de entrenamiento o monitoring para publicar. Los tags de ID fuente y un manifiesto persistente permitieron reanudar sin duplicados.
+
+Se publicaron los 145 artifacts históricos y dos manifiestos de procedencia en el run del champion. Diez copias se sanearon sustituyendo el prefijo del checkout privado, manteniendo los originales y ambos hashes. No se publicaron raw, DB, matrices procesadas, credenciales ni logs locales. Los modelos y valores de resultados permanecen idénticos.
+
+Se verificó el acceso anónimo a los 31 runs, sus parámetros/métricas y la descarga de los 145 artifacts. Las páginas generales del sitio pueden redirigir al login; los enlaces directos `.mlflow` anteriores y las descargas del informe fueron comprobados sin credenciales. No se comparte ningún token con el evaluador.
+
+El champion se recupera como archivo nativo desde su run remoto, artifact `model/XGBoost.ubj`, o desde la copia GitHub `models/XGBoost.ubj`, con el mismo SHA256 del manifiesto. No existe un flavor `MLmodel`, Model Registry ni servicio desplegado. Los artifacts que mencionan IDs locales son snapshots históricos: consultar el mapeo para resolverlos al destino.
 
 ## Model loading
 

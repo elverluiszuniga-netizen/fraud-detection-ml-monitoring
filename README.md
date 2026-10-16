@@ -1,6 +1,6 @@
 # Fraud detection · ML monitoring
 
-Proyecto del Curso III de Machine Learning Engineering: clasificación supervisada de fraude transaccional sobre PaySim. **Preparación local de v1.0.0**; publicación GitHub, enlace externo de experimentos, PR y release pendientes de autorización. [Auditoría](PHASE_7_DELIVERY_AUDIT.md) · [Remediación](PHASE_7A_REMEDIATION_REPORT.md).
+Proyecto del Curso III de Machine Learning Engineering: clasificación supervisada de fraude transaccional sobre PaySim. **Entrega académica publicada en [GitHub](https://github.com/elverluiszuniga-netizen/fraud-detection-ml-monitoring)**, con evidencia histórica accesible en DagsHub. Integración de `development` hacia `main` mediante Pull Request; release v1.0.0 pendiente. [Auditoría](PHASE_7_DELIVERY_AUDIT.md) · [Remediación](PHASE_7A_REMEDIATION_REPORT.md).
 
 ## Problema y objetivo de negocio
 
@@ -104,11 +104,19 @@ LightGBM tuned tiene ranking perfecto (AP=1) pero recall=0 a 0.5: ranking y deci
 
 Fuente: [comparación persistida](artifacts/production_model_comparison.csv). Production: TP 3,723, TN 571,854, FP 0 y FN 13. Alert rate 0.646815%. Doce FN tienen amount=0 y oldbalanceOrg=0. Top0.1% permite revisar 576 filas y captura 15.417559% del fraude Production; su capacidad limita la captura pese al excelente ranking. Validation Top0.1% (1,399 filas) captura 100%. No comparar AP sin considerar la prevalencia distinta. Online simulada significa evaluación etiquetada del segmento posterior; **sin métricas en tiempo real**.
 
-## Modelo y MLflow / preparación DagsHub
+## Modelo y evidencia histórica MLflow en DagsHub
 
 Champion congelado: [models/XGBoost.ubj](models/XGBoost.ubj), 77,796 bytes, SHA256 `44a20bc0e2abbd276ae94790db404248d2ab2c5d01025b00b2e4f935b6f220e4`. [Manifiesto](models/manifest.json): 14 features, 24 rondas efectivas, threshold 0.5, run fuente `1d353308f1e3427094a221667f3da9de`. Se versiona una copia idéntica; no requiere LFS. [Recuperación y carga](docs/model_recovery.md).
 
-MLflow local tiene 31 runs FINISHED: 29 de optimización/comparación, uno SHAP y uno monitoring. Parámetros, métricas, modelos nativos y artifacts están presentes. Model Registry/flavor MLflow no se implementaron. El store y sus 145 archivos permanecen fuera de Git. `localhost` no es evidencia accesible para un evaluador remoto. [MLflow y plan DagsHub](docs/mlflow_dagshub_setup.md): publicación de runs existentes pendiente, sin reentrenar ni inventar enlace.
+Los 31 runs FINISHED se ejecutaron originalmente **en el entorno local**: 29 de optimización/comparación, uno SHAP y uno monitoring. En Fase 7B se publicó posteriormente su evidencia histórica en DagsHub **sin reentrenar ni recalcular métricas**. No fueron entrenamientos ejecutados originalmente en el servidor remoto.
+
+- [Experimento MLflow: los 31 runs](https://dagshub.com/elverl/fraud-detection-ml-monitoring.mlflow/#/experiments/0).
+- [Champion XGBoost: run remoto y artifacts](https://dagshub.com/elverl/fraud-detection-ml-monitoring.mlflow/#/experiments/0/runs/2adae7bc49f14c12a24fb18c2c87b60a).
+- [Informe de publicación y enlaces de descarga](PHASE_7B_DAGSHUB_PUBLICATION_REPORT.md), [mapeo de IDs](PHASE_7B_DAGSHUB_RUN_MAPPING.json) y [manifiesto de artifacts](PHASE_7B_DAGSHUB_ARTIFACT_MANIFEST.json).
+
+Se verificaron 477 parámetros, 617 registros de métricas con timestamp/step y 22 relaciones padre-hijo. Los 145 artifacts históricos se publicaron junto con dos manifiestos adicionales; diez copias sustituyen únicamente rutas privadas, documentando hashes originales y públicos. Los modelos y resultados no cambiaron. Los IDs remotos difieren de los locales: el experimento local `1` corresponde al remoto `0`.
+
+Los 31 runs y los 145 artifacts fueron consultados/descargados sin credenciales. Las páginas generales de DagsHub pueden pedir sesión; usar los enlaces directos de MLflow anteriores. El store SQLite y los originales privados permanecen fuera de Git. El champion es un artifact nativo descargable; no se implementaron Model Registry, flavor MLflow ni deployment. [Procedimiento y alcance](docs/mlflow_dagshub_setup.md).
 
 ## Interpretabilidad SHAP
 
@@ -169,13 +177,13 @@ docs/                      Instalación, Git, tracking, catálogo y guías
 mlruns/, mlartifacts/       Solo locales, ignorados
 ```
 
-[Política Git](docs/git_strategy.md): development para cambios y commits locales; main para integración mediante PR revisada. Fase 7A no altera main. GitHub, PR integrada, tag/release v1.0.0 y enlace externo de experimentos requieren autorización Fase 7B. Raw, secretos, bases y temporales excluidos. Metadata 0.1.0 durante preparación; release aún no creada.
+[Política Git](docs/git_strategy.md): `development` contiene la entrega completa y `main` se integra mediante PR revisada con merge commit. GitHub y la evidencia histórica DagsHub ya están publicados; los informes de fases anteriores describen su estado al cierre de cada fase. Raw, secretos, bases y temporales excluidos. Metadata 0.1.0 durante preparación; tag y release v1.0.0 requieren una autorización posterior y aún no se han creado.
 
 ## Limitaciones y conclusiones
 
-PaySim contiene reglas estructurales muy discriminantes. Resultados casi perfectos no prueban capacidad bancaria; la disponibilidad real de balances y semántica merchant debe verificarse. Reutilización de Validation induce optimismo; hay un solo período fuera de tiempo. Dependencia temporal limita inferencia estadística; AP depende de prevalencia. No se calibraron scores ni optimizaron costos o threshold con Production. No hay AutoML, streaming, cloud ni servicio de alertas.
+PaySim contiene reglas estructurales muy discriminantes. Resultados casi perfectos no prueban capacidad bancaria; la disponibilidad real de balances y semántica merchant debe verificarse. Reutilización de Validation induce optimismo; hay un solo período fuera de tiempo. Dependencia temporal limita inferencia estadística; AP depende de prevalencia. No se calibraron scores ni optimizaron costos o threshold con Production. No hay AutoML, streaming, servicio de scoring ni sistema de alertas.
 
-El pipeline mantiene separación temporal y controles de leakage; XGBoost congelado captura 3,723 de 3,736 fraudes Production sin FP observados. Errores de monto cero y mayor carga de alertas merecen revisión operacional; no justifican modificar el modelo tras mirar Production. SHAP y monitoring permiten explicar límites de la regla dominante y cambios observados, sin afirmar concept drift. La entrega técnica local es revisable; su publicación y accesibilidad externa aún están pendientes.
+El pipeline mantiene separación temporal y controles de leakage; XGBoost congelado captura 3,723 de 3,736 fraudes Production sin FP observados. Errores de monto cero y mayor carga de alertas merecen revisión operacional; no justifican modificar el modelo tras mirar Production. SHAP y monitoring permiten explicar límites de la regla dominante y cambios observados, sin afirmar concept drift. La entrega técnica es revisable en GitHub y su evidencia histórica en DagsHub; la release continúa pendiente.
 
 ## Evidencia por fase
 
