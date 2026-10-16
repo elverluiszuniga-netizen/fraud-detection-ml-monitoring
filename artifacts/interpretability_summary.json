@@ -1,0 +1,637 @@
+{
+  "status": "COMPLETE",
+  "model": "XGBoost tuned provisional champion",
+  "source_model": ".\\data\\processed\\phase3_models\\XGBoost.ubj",
+  "model_sha256": "44a20bc0e2abbd276ae94790db404248d2ab2c5d01025b00b2e4f935b6f220e4",
+  "source_phase3_run_id": "1d353308f1e3427094a221667f3da9de",
+  "effective_iterations": 24,
+  "stored_iterations": 44,
+  "metric_reproduction": true,
+  "validation_metrics": {
+    "pr_auc": 0.9999185900788442,
+    "roc_auc": 0.9999999719684873,
+    "precision_05": 1.0,
+    "recall_05": 0.9988479262672811,
+    "f1_05": 0.9994236311239193,
+    "f2_05": 0.9990781286010602,
+    "tp": 867,
+    "fp": 0,
+    "tn": 1397374,
+    "fn": 1,
+    "k_0.1pct": 1399,
+    "precision_top_0.1pct": 0.6204431736954967,
+    "recall_top_0.1pct": 1.0,
+    "k_0.5pct": 6992,
+    "precision_top_0.5pct": 0.12414187643020595,
+    "recall_top_0.5pct": 1.0,
+    "k_1pct": 13983,
+    "precision_top_1pct": 0.06207537724379604,
+    "recall_top_1pct": 1.0
+  },
+  "validation_rows": 1398242,
+  "validation_frauds": 868,
+  "validation_steps": [
+    321,
+    400
+  ],
+  "production_used": false,
+  "raw_csv_read": false,
+  "model_retrained": false,
+  "method": "Exact native XGBoost Tree SHAP, approx_contribs=False, tree-path-dependent raw margin",
+  "units": "Raw margin log-odds; sigmoid(base + sum SHAP) reconstructs score. Not calibrated probability or causal effects.",
+  "reference": "Training path-cover statistics already stored in trees; no new background rows",
+  "threshold_note": "threshold 0.5 = reference threshold, not final production threshold.",
+  "sample": {
+    "rows": 2868,
+    "frauds": 868,
+    "nonfrauds": 2000,
+    "fraud_fraction": 0.30264993026499304,
+    "seed": 42,
+    "method": "All Validation frauds plus uniform 2,000 nonfrauds without replacement",
+    "selected_indices_sha256": "37028ade879a16c21bf5ccb48af4069a66f2db4f0ac43233b71832b7892582f2",
+    "prevalence_weighted_importance": "Fraud prevalence * fraud mean absolute SHAP + nonfraud prevalence * random nonfraud mean absolute SHAP; estimated, not full population SHAP"
+  },
+  "additivity": {
+    "max_margin_error": 2.6226043701171875e-06,
+    "max_probability_error": 2.384185791015625e-07
+  },
+  "top_features": [
+    {
+      "feature": "orig_balance_emptied",
+      "mean_abs_shap": 2.1778907775878906
+    },
+    {
+      "feature": "amount_to_oldbalanceOrg",
+      "mean_abs_shap": 0.3872995972633362
+    },
+    {
+      "feature": "amount",
+      "mean_abs_shap": 0.1621841937303543
+    },
+    {
+      "feature": "oldbalanceDest",
+      "mean_abs_shap": 0.11601153016090393
+    },
+    {
+      "feature": "oldbalanceOrg",
+      "mean_abs_shap": 0.11352050304412842
+    }
+  ],
+  "emptied": {
+    "sample_rank": 1,
+    "mean_abs_shap": 2.1778907775878906,
+    "states": {
+      "0": {
+        "rows": 2016,
+        "mean_shap": -0.2470957189798355,
+        "median_shap": -0.2479453682899475,
+        "mean_score": 0.010702332481741905
+      },
+      "1": {
+        "rows": 852,
+        "mean_shap": 6.746533393859863,
+        "median_shap": 6.960999011993408,
+        "mean_score": 0.9744666814804077
+      }
+    }
+  },
+  "outside_rule": {
+    "rows": 16,
+    "fraud_fraction": 0.018433179723502304,
+    "detected": 15,
+    "detection_rate": 0.9375,
+    "score_min": 0.05734940618276596,
+    "score_max": 0.9744994044303894,
+    "top_features": [
+      {
+        "feature": "amount",
+        "mean_abs_shap": 3.8615705966949463
+      },
+      {
+        "feature": "oldbalanceOrg",
+        "mean_abs_shap": 3.080129623413086
+      },
+      {
+        "feature": "amount_to_oldbalanceOrg",
+        "mean_abs_shap": 0.7051246762275696
+      },
+      {
+        "feature": "oldbalanceDest",
+        "mean_abs_shap": 0.4827547073364258
+      },
+      {
+        "feature": "orig_balance_emptied",
+        "mean_abs_shap": 0.17245061695575714
+      }
+    ],
+    "correctly_detected_score_summary": [
+      0.967110276222229,
+      0.9625838398933411,
+      0.9625838398933411,
+      0.967110276222229,
+      0.9625838398933411,
+      0.9589652419090271,
+      0.9625838398933411,
+      0.7163143157958984,
+      0.9589652419090271,
+      0.9589652419090271,
+      0.9744994044303894,
+      0.9589652419090271,
+      0.967110276222229,
+      0.9589652419090271,
+      0.9744994044303894
+    ],
+    "rows_artifact": "artifacts/non_rule_fraud_explanations.csv"
+  },
+  "local_cases": {
+    "A_high_score_TP": {
+      "exists": true,
+      "validation_row_index": 30299,
+      "step": 322,
+      "label": 1,
+      "score": 0.9790554642677307,
+      "prediction_05": 1,
+      "distance_to_reference_threshold": 0.4790554642677307,
+      "base_log_odds": -5.281437873840332,
+      "features": {
+        "step": 322.0,
+        "amount": 2533650.0,
+        "oldbalanceOrg": 2533650.0,
+        "oldbalanceDest": 0.0,
+        "amount_to_oldbalanceOrg": 1.0,
+        "orig_balance_zero": 0.0,
+        "orig_balance_emptied": 1.0,
+        "dest_is_merchant": 0.0,
+        "type_CASH_IN": 0.0,
+        "type_CASH_OUT": 0.0,
+        "type_DEBIT": 0.0,
+        "type_PAYMENT": 0.0,
+        "type_TRANSFER": 1.0,
+        "type_UNKNOWN": 0.0
+      },
+      "positive_contributors": [
+        {
+          "feature": "orig_balance_emptied",
+          "value": 1.0,
+          "shap_log_odds": 6.699925422668457
+        },
+        {
+          "feature": "amount_to_oldbalanceOrg",
+          "value": 1.0,
+          "shap_log_odds": 0.8346683382987976
+        },
+        {
+          "feature": "amount",
+          "value": 2533650.0,
+          "shap_log_odds": 0.7885299324989319
+        },
+        {
+          "feature": "oldbalanceOrg",
+          "value": 2533650.0,
+          "shap_log_odds": 0.37611013650894165
+        },
+        {
+          "feature": "oldbalanceDest",
+          "value": 0.0,
+          "shap_log_odds": 0.3089398741722107
+        }
+      ],
+      "negative_contributors": [
+        {
+          "feature": "type_CASH_OUT",
+          "value": 0.0,
+          "shap_log_odds": -0.07954339683055878
+        },
+        {
+          "feature": "step",
+          "value": 322.0,
+          "shap_log_odds": -0.02230558730661869
+        },
+        {
+          "feature": "orig_balance_zero",
+          "value": 0.0,
+          "shap_log_odds": -0.0012027978664264083
+        }
+      ],
+      "additivity": {
+        "max_margin_error": 7.152557373046875e-07,
+        "max_probability_error": 0.0
+      },
+      "interpretation": "Model margin relative to its tree-path reference: positive contributions raise the margin and negative contributions lower it. Contributions are associative model attributions, not causes of fraud."
+    },
+    "B_low_score_TN": {
+      "exists": true,
+      "validation_row_index": 300,
+      "step": 321,
+      "label": 0,
+      "score": 0.0035836673341691494,
+      "prediction_05": 0,
+      "distance_to_reference_threshold": 0.4964163303375244,
+      "base_log_odds": -5.281437873840332,
+      "features": {
+        "step": 321.0,
+        "amount": 14265.08984375,
+        "oldbalanceOrg": 13962.2197265625,
+        "oldbalanceDest": 0.0,
+        "amount_to_oldbalanceOrg": 1.021692156791687,
+        "orig_balance_zero": 0.0,
+        "orig_balance_emptied": 0.0,
+        "dest_is_merchant": 1.0,
+        "type_CASH_IN": 0.0,
+        "type_CASH_OUT": 0.0,
+        "type_DEBIT": 0.0,
+        "type_PAYMENT": 1.0,
+        "type_TRANSFER": 0.0,
+        "type_UNKNOWN": 0.0
+      },
+      "positive_contributors": [
+        {
+          "feature": "amount_to_oldbalanceOrg",
+          "value": 1.021692156791687,
+          "shap_log_odds": 0.7271977066993713
+        },
+        {
+          "feature": "oldbalanceDest",
+          "value": 0.0,
+          "shap_log_odds": 0.06631902605295181
+        },
+        {
+          "feature": "type_CASH_IN",
+          "value": 0.0,
+          "shap_log_odds": 0.002465083496645093
+        }
+      ],
+      "negative_contributors": [
+        {
+          "feature": "type_CASH_OUT",
+          "value": 0.0,
+          "shap_log_odds": -0.4232478141784668
+        },
+        {
+          "feature": "orig_balance_emptied",
+          "value": 0.0,
+          "shap_log_odds": -0.24779705703258514
+        },
+        {
+          "feature": "dest_is_merchant",
+          "value": 1.0,
+          "shap_log_odds": -0.21537452936172485
+        },
+        {
+          "feature": "type_PAYMENT",
+          "value": 1.0,
+          "shap_log_odds": -0.12694069743156433
+        },
+        {
+          "feature": "type_TRANSFER",
+          "value": 0.0,
+          "shap_log_odds": -0.053699176758527756
+        }
+      ],
+      "additivity": {
+        "max_margin_error": 0.0,
+        "max_probability_error": 0.0
+      },
+      "interpretation": "Model margin relative to its tree-path reference: positive contributions raise the margin and negative contributions lower it. Contributions are associative model attributions, not causes of fraud."
+    },
+    "C_false_negative": {
+      "exists": true,
+      "validation_row_index": 1174926,
+      "step": 387,
+      "label": 1,
+      "score": 0.05734940618276596,
+      "prediction_05": 0,
+      "distance_to_reference_threshold": 0.44265058636665344,
+      "base_log_odds": -5.281437873840332,
+      "features": {
+        "step": 387.0,
+        "amount": 0.0,
+        "oldbalanceOrg": 0.0,
+        "oldbalanceDest": 7970766.5,
+        "amount_to_oldbalanceOrg": 0.0,
+        "orig_balance_zero": 1.0,
+        "orig_balance_emptied": 0.0,
+        "dest_is_merchant": 0.0,
+        "type_CASH_IN": 0.0,
+        "type_CASH_OUT": 1.0,
+        "type_DEBIT": 0.0,
+        "type_PAYMENT": 0.0,
+        "type_TRANSFER": 0.0,
+        "type_UNKNOWN": 0.0
+      },
+      "positive_contributors": [
+        {
+          "feature": "amount",
+          "value": 0.0,
+          "shap_log_odds": 1.3262059688568115
+        },
+        {
+          "feature": "type_CASH_OUT",
+          "value": 1.0,
+          "shap_log_odds": 1.0543264150619507
+        },
+        {
+          "feature": "step",
+          "value": 387.0,
+          "shap_log_odds": 0.2745084762573242
+        },
+        {
+          "feature": "orig_balance_zero",
+          "value": 1.0,
+          "shap_log_odds": 0.11484872549772263
+        },
+        {
+          "feature": "oldbalanceOrg",
+          "value": 0.0,
+          "shap_log_odds": 0.09978678822517395
+        }
+      ],
+      "negative_contributors": [
+        {
+          "feature": "orig_balance_emptied",
+          "value": 0.0,
+          "shap_log_odds": -0.21117794513702393
+        },
+        {
+          "feature": "oldbalanceDest",
+          "value": 7970766.5,
+          "shap_log_odds": -0.17150816321372986
+        },
+        {
+          "feature": "type_TRANSFER",
+          "value": 0.0,
+          "shap_log_odds": -0.00622865604236722
+        }
+      ],
+      "additivity": {
+        "max_margin_error": 4.76837158203125e-07,
+        "max_probability_error": 2.2351741790771484e-08
+      },
+      "interpretation": "Model margin relative to its tree-path reference: positive contributions raise the margin and negative contributions lower it. Contributions are associative model attributions, not causes of fraud."
+    },
+    "D_false_positive": {
+      "exists": false,
+      "reason": "No matching Validation observation at reference threshold 0.5"
+    },
+    "E_non_rule_TP": {
+      "exists": true,
+      "validation_row_index": 1174923,
+      "step": 387,
+      "label": 1,
+      "score": 0.9744994044303894,
+      "prediction_05": 1,
+      "distance_to_reference_threshold": 0.4744994044303894,
+      "base_log_odds": -5.281437873840332,
+      "features": {
+        "step": 387.0,
+        "amount": 10000000.0,
+        "oldbalanceOrg": 14892193.0,
+        "oldbalanceDest": 0.0,
+        "amount_to_oldbalanceOrg": 0.6714927554130554,
+        "orig_balance_zero": 0.0,
+        "orig_balance_emptied": 0.0,
+        "dest_is_merchant": 0.0,
+        "type_CASH_IN": 0.0,
+        "type_CASH_OUT": 0.0,
+        "type_DEBIT": 0.0,
+        "type_PAYMENT": 0.0,
+        "type_TRANSFER": 1.0,
+        "type_UNKNOWN": 0.0
+      },
+      "positive_contributors": [
+        {
+          "feature": "amount",
+          "value": 10000000.0,
+          "shap_log_odds": 4.169510841369629
+        },
+        {
+          "feature": "oldbalanceOrg",
+          "value": 14892193.0,
+          "shap_log_odds": 3.4247307777404785
+        },
+        {
+          "feature": "amount_to_oldbalanceOrg",
+          "value": 0.6714927554130554,
+          "shap_log_odds": 0.9062296748161316
+        },
+        {
+          "feature": "oldbalanceDest",
+          "value": 0.0,
+          "shap_log_odds": 0.5166959762573242
+        },
+        {
+          "feature": "type_TRANSFER",
+          "value": 1.0,
+          "shap_log_odds": 0.15785111486911774
+        }
+      ],
+      "negative_contributors": [
+        {
+          "feature": "orig_balance_emptied",
+          "value": 0.0,
+          "shap_log_odds": -0.16604146361351013
+        },
+        {
+          "feature": "step",
+          "value": 387.0,
+          "shap_log_odds": -0.06629063934087753
+        },
+        {
+          "feature": "type_CASH_OUT",
+          "value": 0.0,
+          "shap_log_odds": -0.01687464863061905
+        },
+        {
+          "feature": "orig_balance_zero",
+          "value": 0.0,
+          "shap_log_odds": -0.0017483880510553718
+        }
+      ],
+      "additivity": {
+        "max_margin_error": 0.0,
+        "max_probability_error": 0.0
+      },
+      "interpretation": "Model margin relative to its tree-path reference: positive contributions raise the margin and negative contributions lower it. Contributions are associative model attributions, not causes of fraud."
+    },
+    "F_nearest_reference_threshold": {
+      "exists": true,
+      "validation_row_index": 1174917,
+      "step": 387,
+      "label": 1,
+      "score": 0.7163143157958984,
+      "prediction_05": 1,
+      "distance_to_reference_threshold": 0.21631431579589844,
+      "base_log_odds": -5.281437873840332,
+      "features": {
+        "step": 387.0,
+        "amount": 10000000.0,
+        "oldbalanceOrg": 44892192.0,
+        "oldbalanceDest": 0.0,
+        "amount_to_oldbalanceOrg": 0.22275587916374207,
+        "orig_balance_zero": 0.0,
+        "orig_balance_emptied": 0.0,
+        "dest_is_merchant": 0.0,
+        "type_CASH_IN": 0.0,
+        "type_CASH_OUT": 0.0,
+        "type_DEBIT": 0.0,
+        "type_PAYMENT": 0.0,
+        "type_TRANSFER": 1.0,
+        "type_UNKNOWN": 0.0
+      },
+      "positive_contributors": [
+        {
+          "feature": "amount",
+          "value": 10000000.0,
+          "shap_log_odds": 3.732511281967163
+        },
+        {
+          "feature": "oldbalanceOrg",
+          "value": 44892192.0,
+          "shap_log_odds": 2.5153684616088867
+        },
+        {
+          "feature": "oldbalanceDest",
+          "value": 0.0,
+          "shap_log_odds": 0.46432337164878845
+        },
+        {
+          "feature": "type_TRANSFER",
+          "value": 1.0,
+          "shap_log_odds": 0.15785111486911774
+        },
+        {
+          "feature": "dest_is_merchant",
+          "value": 0.0,
+          "shap_log_odds": 0.0002710653643589467
+        }
+      ],
+      "negative_contributors": [
+        {
+          "feature": "amount_to_oldbalanceOrg",
+          "value": 0.22275587916374207,
+          "shap_log_odds": -0.3128279745578766
+        },
+        {
+          "feature": "orig_balance_emptied",
+          "value": 0.0,
+          "shap_log_odds": -0.18300235271453857
+        },
+        {
+          "feature": "step",
+          "value": 387.0,
+          "shap_log_odds": -0.14850692451000214
+        },
+        {
+          "feature": "type_CASH_OUT",
+          "value": 0.0,
+          "shap_log_odds": -0.01687464863061905
+        },
+        {
+          "feature": "orig_balance_zero",
+          "value": 0.0,
+          "shap_log_odds": -0.0017483880510553718
+        }
+      ],
+      "additivity": {
+        "max_margin_error": 1.430511474609375e-06,
+        "max_probability_error": 2.384185791015625e-07
+      },
+      "interpretation": "Model margin relative to its tree-path reference: positive contributions raise the margin and negative contributions lower it. Contributions are associative model attributions, not causes of fraud."
+    }
+  },
+  "interaction_sample_rows": 128,
+  "interaction_marginal_error": 9.5367431640625e-07,
+  "top_interaction_components": [
+    {
+      "feature_a": "amount",
+      "feature_b": "oldbalanceOrg",
+      "mean_abs_pair_component": 0.1690622717142105
+    },
+    {
+      "feature_a": "amount",
+      "feature_b": "orig_balance_emptied",
+      "mean_abs_pair_component": 0.06926248222589493
+    },
+    {
+      "feature_a": "oldbalanceDest",
+      "feature_b": "type_TRANSFER",
+      "mean_abs_pair_component": 0.06208552420139313
+    },
+    {
+      "feature_a": "oldbalanceOrg",
+      "feature_b": "orig_balance_emptied",
+      "mean_abs_pair_component": 0.058549970388412476
+    },
+    {
+      "feature_a": "amount",
+      "feature_b": "amount_to_oldbalanceOrg",
+      "mean_abs_pair_component": 0.0535658523440361
+    }
+  ],
+  "versions": {
+    "shap": "0.52.0",
+    "xgboost": "3.4.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6"
+  },
+  "previous_phase_file_hashes": {
+    "INITIAL_DATA_AUDIT.md": "7ccc813e55eebbf2bcc10f4c6ecc4abec8c6dd3cd140676c2234caf733b9a68e",
+    "PHASE_2_MODELING_REPORT.md": "d95c8e5fdcd5573e9a9754db22bf74e84e81ae33dc5d52a1ef66fe0dc917ab9b",
+    "PHASE_3_OPTIMIZATION_MLFLOW_REPORT.md": "572535a41883e5d708a40d91d203d01307031a2b80ca4145b203dfd47717f384",
+    "src/fraud_detection/features.py": "73badebaa186e2fc323fd6c46de784b5002c380dca7ac360a70f7a9a32c0f28a",
+    "src/fraud_detection/modeling.py": "e14378a4b51691ef03bdebc45c7018a83a2ce1832d503c19544c8d4d7e69cfc3",
+    "src/fraud_detection/optimization.py": "b577274b381ccedc4f470f7aab431a74ea29f763c0e25773d879d2a00f380db2",
+    "src/fraud_detection/tracking.py": "78ab9b1573daf63379964c97ebea0a1a7a7f18e139bb138fc91e8ea26f12049e",
+    "scripts/run_baselines.py": "214fdac476209b002446ba32222f442df65a3f4c0b0c8600f745667583d860e6",
+    "scripts/run_optimization.py": "1da98d936372bd492835a89ba75f281fc8448ff65362829a8b1240389cdfce8b",
+    "artifacts/phase3_run.json": "21d9d8636e0dcf3582f7a0f0baaa7e0a090ddbb579037ac2ceaf60c8d1efc22e",
+    "artifacts/tuned_model_comparison.csv": "7ea3fd6113d642c5752e27c04ded23dde23a19e4910157990d0d8cacb94411d5",
+    "notebooks/02_ml_training.ipynb": "a218b5876486836627e46c27e1ed6948e39b5352a8208abe57a0c0406a9063dc",
+    "notebooks/03_hyperparameter_optimization.ipynb": "14ff3f28b32e467e12416ae1cd828a8d231fa3139033c4aae84e8d9736e24450"
+  },
+  "validation_matrix_hashes": {
+    "validation_X.npy": "dc1066ec7f9d3cd8cea756c9dc4ae6b7d5dd94b7d7e2a9f8b1344cab3bcfb2dd",
+    "validation_y.npy": "32f5950840801da44ba733ced3aa5b7b1b52ff463cc8e21ad6d677479c19cb29"
+  },
+  "analysis_seconds": 5.8494955999995,
+  "mlflow": {
+    "run_id": "4823399689d0480eac371aa8de02016b",
+    "experiment_id": "1",
+    "tracking_uri": "sqlite:///./mlruns/mlflow.db",
+    "phase3_history_hashes": {
+      "7fa24d6ea79f4b6d8f62a07236a351f9": "453ccd888c5cc457b7124a8ae45d5e6238cfd540ba64414618802b310ec9c3b6",
+      "33845df18b4a48288e116b0027e6b946": "09a40d866fb9cfbce053f292aed8bf7b89b622107c10c8d41505bbd85f294f89",
+      "ac0682a9e54a4f75a3b63cd052a1fdc6": "3ab569a3165c503ee90cdd02017172d93ad01e67491b3585b8b75f8e62bf9a6c",
+      "e5b6ee1abaca488095f18010663e5166": "a907fd98739d8429e8d026ae4d1f0368e514806e82b1730f56198987e4344959",
+      "d18fbdce26b74ebf97073b110eca54c2": "8d2f6dd48340297dc42609e20880dffe97dbc937ab74202ca6f8293db84b27bc",
+      "c59c39c3a2c94ac09c84ab4910a6971b": "d4af3dc155bc6221ae8e8104cfe2a38cdaf72b009867f02ec5d76b41972c7fd9",
+      "e2ed011b3ba047e7bded7d278c8b0115": "762b8bdb9458cfe7c0be43156ec86b601715cc2a0760ec02027aee94533b280e",
+      "ec2c94b13a2f4c8b9d28731222d400a7": "65988ac2af5fc123a45bb258733b6a49e6c345146db18e411b4145651d533802",
+      "dfeb3a494f8d46a184212798089f23ec": "0c2d0609667ffd018c0e029d519a60e85b5e879dadcdb96e7e850741970da16e",
+      "023cd1c3521a4affbf7912a1ce58fe09": "73981c229e5e7dfe3c0e7e20d3c78c07479c46e3a50c84a2681cbd33be60155c",
+      "cdeaeffbe978456a93bbf642eeb10b8d": "d3a5eabaf4397fa3d412176252efd6cf749ae51678fffe9ed4e58f29ddde4b73",
+      "41f73af9dba14a7d97371b548fa1e4b8": "e723a1d7defc07b2a29e4154ec5a40a1a69d7942184806f83fce82514a97380d",
+      "1fbb627a70de438b8aefa60154a1f57d": "796fba56069855ddf202ab315a324715f836eac40c8fa334a497178c85fdbfde",
+      "c11529857b7c4030b5589c588f94008a": "4b7ca2aabd98632e7b4ac21d85ca616ce5be0e88b22ac92c22468d41f5c4f7d3",
+      "3ee468511a6c4f6fb78bfa8693c82928": "617a2f79ffe38dbb187100813a0a63ec0b557c96022afecedad883939ee9e26b",
+      "1d353308f1e3427094a221667f3da9de": "2014d8a923725d090741a2a19e8da627f496713c7bb48a5dc26e32e14da29da1",
+      "4e71a938811f4a86a71292cb6adeb669": "9bb4b0f61c6ff14cf79ee021851cfad64c85fbff389e8e92ce1150ce8f93f1a1",
+      "17155e8a4c2449c9a8930b67e397e336": "4696112f0c285fbed531baf385e1a0c4890d0f32007008ed84058be728e36b5a",
+      "54ea51eb9ac44e85af481111bd904cdd": "c84b251c647b98aff23bad11d60c28da8953e9675ba04185419ffe6f3981e3f0",
+      "3f5e3df5e3fe418ebff49133ceb1d51d": "ae28a6136e0f9e3fa2a7dedcdbadfc265b943b962fc2328d5b5f25e8567b5b92",
+      "78eabe4bbf1048c482a7cafd7508b3e9": "b084e37aa695923e453f1c3f719e7984a53f4f4d53a21834d24ec80de973d8ce",
+      "e936815afc094268bf71234ef023100c": "236a57030abdc4a15f95e035841ab3395171f455e86de533b8c76cc5621cff16",
+      "d742fd989af24bf3a71a4c0c60b8bba7": "24c1dc6a4e4397e574a68aede1ff39b2e692da22786ad84986f4c5e67d8623fa",
+      "dbaf47c49bb54324b1028450609ce4d8": "8f2e80157d90ed18ea57a22c6c7cb6c907e282db1dd5f8f200a44ee54ad7ba69",
+      "92a5ca187d1b4fcf92d9c89ffbaa72ad": "c33a52573aaf6338b4d751bfc9e2362c112a4dbf4b427e640b92ec875b0b4fde",
+      "b4afceed25ca464e9ef3c828cc9baf9a": "3a5348c4ad63d4931923c240c9dae63af68cbef86b1dd8b3f0df2b4f026ff6f5",
+      "c17e19d3d4904ab38316ac9e21395984": "524b5e005eac46b7a44b951c7cfda3888e143bc0234dd7bd4d9187f110825c8f",
+      "0b450b60eded4bdab40160bd9d4ce3b1": "58aaa061799d209a305f94ae3fa0ee0c0c4fc15c64556611309903092b9035f9",
+      "8102e98114514566a47f68945f260aa4": "b49fc0f8dbd42d1f73cdef0208030d38d67c5553102eb9e11bbc9bd749847cf0"
+    },
+    "new_run_count": 1,
+    "historical_runs_unchanged": true,
+    "run_status": "FINISHED"
+  },
+  "total_seconds": 9.219321799999307
+}

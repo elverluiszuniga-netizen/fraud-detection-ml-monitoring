@@ -1,0 +1,41 @@
+{
+  "model_sha256": "44a20bc0e2abbd276ae94790db404248d2ab2c5d01025b00b2e4f935b6f220e4",
+  "source_run_id": "1d353308f1e3427094a221667f3da9de",
+  "feature_names": [
+    "step",
+    "amount",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "amount_to_oldbalanceOrg",
+    "orig_balance_zero",
+    "orig_balance_emptied",
+    "dest_is_merchant",
+    "type_CASH_IN",
+    "type_CASH_OUT",
+    "type_DEBIT",
+    "type_PAYMENT",
+    "type_TRANSFER",
+    "type_UNKNOWN"
+  ],
+  "feature_source_sha256": "73badebaa186e2fc323fd6c46de784b5002c380dca7ac360a70f7a9a32c0f28a",
+  "recorded_training_parameters": {
+    "n_estimators": 148,
+    "max_depth": 6,
+    "learning_rate": 0.1469541059356907,
+    "min_child_weight": 3.532871354926938,
+    "subsample": 0.9942734367531818,
+    "colsample_bytree": 0.8825728131957696,
+    "reg_alpha": 0.02165779390916417,
+    "reg_lambda": 0.5395608952674368,
+    "gamma": 0.9674364834653933,
+    "scale_pos_weight": 10.0
+  },
+  "effective_iterations": 24,
+  "threshold": 0.5,
+  "threshold_status": "Reference evaluation threshold, not final production threshold",
+  "model_path": "models/XGBoost.ubj",
+  "format": "XGBoost native UBJ",
+  "bytes": 77796,
+  "role": "Unchanged academic simulated-production champion; no live deployment",
+  "stored_rounds": 44
+}

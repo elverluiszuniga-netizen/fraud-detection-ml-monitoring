@@ -1,0 +1,10 @@
+{
+  "filename": "PS_20174392719_1491204439457_log.csv",
+  "bytes": 493534783,
+  "sha256": "16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b",
+  "rows": 6362620,
+  "columns": 11,
+  "source": "https://www.kaggle.com/datasets/ealaxi/paysim1",
+  "license": "CC BY-SA 4.0",
+  "path": "data/raw/PS_20174392719_1491204439457_log.csv"
+}
