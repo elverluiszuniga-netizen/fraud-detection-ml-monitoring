@@ -1,9 +1,29 @@
 [project]
 name = "fraud-detection-ml-monitoring"
 version = "0.1.0"
-description = "Inicialización y auditoría temporal del dataset de fraude"
+description = "Detección de fraude PaySim, interpretabilidad y monitoreo temporal simulado"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "evidently>=0.7.23",
+    "ipython>=8.39.0",
+    "lightgbm>=4.7.0",
+    "matplotlib>=3.10.9",
+    "mlflow>=3.16.1",
+    "numpy>=2.2.6",
+    "optuna>=5.0.0",
+    "pandas>=2.3.3",
+    "plotly>=5.24.1",
+    "pytest>=9.1.1",
+    "scikit-learn>=1.7.2",
+    "scipy>=1.15.3",
+    "shap>=0.49.1",
+    "streamlit>=1.65.0",
+    "xgboost>=3.2.0",
+]
 
 [tool.uv]
 package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["tmp", ".venv", "private_publication_originals"]

@@ -1,0 +1,268 @@
+{
+  "execution_id": "20261004T152211371659Z",
+  "status": "COMPLETE",
+  "experiment_id": "1",
+  "experiment_name": "fraud-detection-hyperparameter-optimization",
+  "tracking_uri": "sqlite:///./mlruns/mlflow.db",
+  "optuna_storage": "sqlite:///./optuna_studies/phase3.db",
+  "seed": 42,
+  "max_trials": 20,
+  "minimum_trials": 10,
+  "saturation": {
+    "window": 5,
+    "floor": 0.9999,
+    "tolerance": 1e-05
+  },
+  "production_used": false,
+  "sampler": "TPESampler(seed=42,n_startup_trials=5,multivariate=False)",
+  "direction": "maximize",
+  "objective": "exact Validation average_precision_score",
+  "pruning": "NopPruner; estimator early stopping only",
+  "early_stopping": {
+    "patience": 20,
+    "XGBoost_metric": "aucpr (interpolated PR area, not exact AP)",
+    "LightGBM_metric": "average_precision",
+    "validation_steps": [
+      321,
+      400
+    ]
+  },
+  "versions": {
+    "optuna": "5.0.0",
+    "mlflow": "3.16.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0"
+  },
+  "algorithms": {
+    "XGBoost": {
+      "study_name": "20261004T152211371659Z_XGBoost",
+      "trials": 10,
+      "best_trial": 7,
+      "best_parameters": {
+        "n_estimators": 148,
+        "max_depth": 6,
+        "learning_rate": 0.1469541059356907,
+        "min_child_weight": 3.532871354926938,
+        "subsample": 0.9942734367531818,
+        "colsample_bytree": 0.8825728131957696,
+        "reg_alpha": 0.02165779390916417,
+        "reg_lambda": 0.5395608952674368,
+        "gamma": 0.9674364834653933,
+        "scale_pos_weight": 10.0
+      },
+      "best_trial_value": 0.9999185900788442,
+      "best_trial_run_id": "1fbb627a70de438b8aefa60154a1f57d",
+      "stop_reason": "prespecified_practical_saturation",
+      "trial_pr_auc_min": 0.998849082523785,
+      "trial_pr_auc_max": 0.9999185900788442,
+      "best_run_id": "1d353308f1e3427094a221667f3da9de",
+      "refit_matches_best_trial": true
+    },
+    "LightGBM": {
+      "study_name": "20261004T152211371659Z_LightGBM",
+      "trials": 10,
+      "best_trial": 0,
+      "best_parameters": {
+        "n_estimators": 100,
+        "learning_rate": 0.1,
+        "max_depth": 5,
+        "num_leaves": 31,
+        "min_child_samples": 20,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0001,
+        "reg_lambda": 0.5,
+        "scale_pos_weight": 1.0
+      },
+      "best_trial_value": 1.0,
+      "best_trial_run_id": "17155e8a4c2449c9a8930b67e397e336",
+      "stop_reason": "prespecified_practical_saturation",
+      "trial_pr_auc_min": 0.023452198744142182,
+      "trial_pr_auc_max": 1.0,
+      "best_run_id": "0b450b60eded4bdab40160bd9d4ce3b1",
+      "refit_matches_best_trial": true
+    }
+  },
+  "runs": [
+    {
+      "role": "baseline_reference",
+      "algorithm": "LogisticRegression",
+      "run_id": "7fa24d6ea79f4b6d8f62a07236a351f9"
+    },
+    {
+      "role": "baseline_reference",
+      "algorithm": "RandomForest",
+      "run_id": "33845df18b4a48288e116b0027e6b946"
+    },
+    {
+      "role": "baseline_reference",
+      "algorithm": "XGBoost",
+      "run_id": "ac0682a9e54a4f75a3b63cd052a1fdc6"
+    },
+    {
+      "role": "baseline_reference",
+      "algorithm": "LightGBM",
+      "run_id": "e5b6ee1abaca488095f18010663e5166"
+    },
+    {
+      "role": "algorithm_parent",
+      "algorithm": "XGBoost",
+      "run_id": "d18fbdce26b74ebf97073b110eca54c2"
+    },
+    {
+      "role": "trial",
+      "algorithm": "XGBoost",
+      "trial": 0,
+      "run_id": "c59c39c3a2c94ac09c84ab4910a6971b"
+    },
+    {
+      "role": "trial",
+      "algorithm": "XGBoost",
+      "trial": 1,
+      "run_id": "e2ed011b3ba047e7bded7d278c8b0115"
+    },
+    {
+      "role": "trial",
+      "algorithm": "XGBoost",
+      "trial": 2,
+      "run_id": "ec2c94b13a2f4c8b9d28731222d400a7"
+    },
+    {
+      "role": "trial",
+      "algorithm": "XGBoost",
+      "trial": 3,
+      "run_id": "dfeb3a494f8d46a184212798089f23ec"
+    },
+    {
+      "role": "trial",
+      "algorithm": "XGBoost",
+      "trial": 4,
+      "run_id": "023cd1c3521a4affbf7912a1ce58fe09"
+    },
+    {
+      "role": "trial",
+      "algorithm": "XGBoost",
+      "trial": 5,
+      "run_id": "cdeaeffbe978456a93bbf642eeb10b8d"
+    },
+    {
+      "role": "trial",
+      "algorithm": "XGBoost",
+      "trial": 6,
+      "run_id": "41f73af9dba14a7d97371b548fa1e4b8"
+    },
+    {
+      "role": "trial",
+      "algorithm": "XGBoost",
+      "trial": 7,
+      "run_id": "1fbb627a70de438b8aefa60154a1f57d"
+    },
+    {
+      "role": "trial",
+      "algorithm": "XGBoost",
+      "trial": 8,
+      "run_id": "c11529857b7c4030b5589c588f94008a"
+    },
+    {
+      "role": "trial",
+      "algorithm": "XGBoost",
+      "trial": 9,
+      "run_id": "3ee468511a6c4f6fb78bfa8693c82928"
+    },
+    {
+      "role": "best_trial_refit",
+      "algorithm": "XGBoost",
+      "run_id": "1d353308f1e3427094a221667f3da9de"
+    },
+    {
+      "role": "algorithm_parent",
+      "algorithm": "LightGBM",
+      "run_id": "4e71a938811f4a86a71292cb6adeb669"
+    },
+    {
+      "role": "trial",
+      "algorithm": "LightGBM",
+      "trial": 0,
+      "run_id": "17155e8a4c2449c9a8930b67e397e336"
+    },
+    {
+      "role": "trial",
+      "algorithm": "LightGBM",
+      "trial": 1,
+      "run_id": "54ea51eb9ac44e85af481111bd904cdd"
+    },
+    {
+      "role": "trial",
+      "algorithm": "LightGBM",
+      "trial": 2,
+      "run_id": "3f5e3df5e3fe418ebff49133ceb1d51d"
+    },
+    {
+      "role": "trial",
+      "algorithm": "LightGBM",
+      "trial": 3,
+      "run_id": "78eabe4bbf1048c482a7cafd7508b3e9"
+    },
+    {
+      "role": "trial",
+      "algorithm": "LightGBM",
+      "trial": 4,
+      "run_id": "e936815afc094268bf71234ef023100c"
+    },
+    {
+      "role": "trial",
+      "algorithm": "LightGBM",
+      "trial": 5,
+      "run_id": "d742fd989af24bf3a71a4c0c60b8bba7"
+    },
+    {
+      "role": "trial",
+      "algorithm": "LightGBM",
+      "trial": 6,
+      "run_id": "dbaf47c49bb54324b1028450609ce4d8"
+    },
+    {
+      "role": "trial",
+      "algorithm": "LightGBM",
+      "trial": 7,
+      "run_id": "92a5ca187d1b4fcf92d9c89ffbaa72ad"
+    },
+    {
+      "role": "trial",
+      "algorithm": "LightGBM",
+      "trial": 8,
+      "run_id": "b4afceed25ca464e9ef3c828cc9baf9a"
+    },
+    {
+      "role": "trial",
+      "algorithm": "LightGBM",
+      "trial": 9,
+      "run_id": "c17e19d3d4904ab38316ac9e21395984"
+    },
+    {
+      "role": "best_trial_refit",
+      "algorithm": "LightGBM",
+      "run_id": "0b450b60eded4bdab40160bd9d4ce3b1"
+    },
+    {
+      "role": "comparison_summary",
+      "run_id": "8102e98114514566a47f68945f260aa4"
+    }
+  ],
+  "provisional_champion": {
+    "model": "XGBoost",
+    "variant": "tuned",
+    "status": "PROVISIONAL CHAMPION",
+    "criterion": "Tuned candidates within 0.0001 AP of best; full Top0.1% capture preferred; then FN, FP, measured prediction latency, effective iterations, training time and name",
+    "reason": "XGBoost in practical AP band, Top0.1% recall=1.000000; threshold 0.5 FN=1, FP=0; prediction=0.187s; effective iterations=24. No statistically proven superiority; times are one-run measurements."
+  },
+  "optimization_seconds": 578.8144428999985,
+  "sanity_seconds": 61.56280160000097,
+  "total_compute_seconds": 640.3772444999995,
+  "summary_run_id": "8102e98114514566a47f68945f260aa4",
+  "mlflow_run_count": 29,
+  "all_runs_finished": true
+}

@@ -26,3 +26,39 @@ artifacts/*
 !artifacts/.gitkeep
 tmp/
 .uv-cache/
+!artifacts/baseline_model_comparison.csv
+!artifacts/development_temporal_profile.csv
+!artifacts/phase2_run.json
+mlartifacts/
+optuna_studies/
+# Descargas y consigna académica local (no son entregables de código)
+*.zip
+Proyecto Final - Curso MLE3.pdf
+!artifacts/sanity_univariate_features.csv
+!artifacts/sanity_simple_rules.csv
+!artifacts/phase3_sanity.json
+!artifacts/optimization_trials.csv
+!artifacts/tuned_model_comparison.csv
+!artifacts/phase3_run.json
+!artifacts/hyperparameter_search_space.json
+!artifacts/shap_global_importance.csv
+!artifacts/local_explanations.csv
+!artifacts/interpretability_summary.json
+!artifacts/shap_feature_directions.csv
+!artifacts/non_rule_fraud_explanations.csv
+!artifacts/shap_group_comparison.csv
+!artifacts/production_monitoring_freeze.json
+!artifacts/monitoring_summary.json
+!artifacts/production_model_comparison.csv
+!artifacts/data_drift_features.csv
+!artifacts/type_conditioned_drift.csv
+!artifacts/monitoring_windows.csv
+!artifacts/monitoring_by_type.csv
+!artifacts/monitoring_scores.csv
+!artifacts/monitoring_relation_checks.csv
+!artifacts/monitoring_atypical_cases.csv
+!artifacts/production_step_profile.csv
+
+# Original evidence retained locally before publication sanitization
+private_publication_originals/
+*.db

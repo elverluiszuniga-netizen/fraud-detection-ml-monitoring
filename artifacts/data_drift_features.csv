@@ -1,0 +1,15 @@
+feature,reference_mean,current_mean,practical_threshold,structural_time,test,effect_metric,effect,p_value,psi,holm_p_value,statistical_shift,practically_material,drift_detected,psi_review
+step,216.73017212628932,511.5102329783353,0.1,True,KS_asymptotic,KS_D,1.0,0.0,12.537162818326717,1.0,False,True,False,False
+amount,181350.2119629572,164898.32637850547,0.1,False,KS_asymptotic,KS_D,0.02125340700149536,0.0,0.0034887135011116713,0.0,True,False,False,False
+oldbalanceOrg,844711.3905464503,725014.6059619167,0.1,False,KS_asymptotic,KS_D,0.031981706619262695,0.0,0.005500841298285092,0.0,True,False,False,False
+oldbalanceDest,1092353.0661296851,1184639.1930391479,0.1,False,KS_asymptotic,KS_D,0.023272335529327393,0.0,0.003109041791895845,0.0,True,False,False,False
+amount_to_oldbalanceOrg,82.3303532109617,75.51119035632742,0.1,False,KS_asymptotic,KS_D,0.03797677159309387,0.0,0.007375890999159377,0.0,True,False,False,False
+orig_balance_zero,0.3333307413301815,0.30134991921332893,0.05,False,chi_square,total_variation,0.03198082211685252,0.0,,0.0,True,False,False,False
+orig_balance_emptied,0.0007579017216084935,0.006311784429889331,0.05,False,chi_square,total_variation,0.005553882708280835,0.0,,0.0,True,False,False,False
+dest_is_merchant,0.3367895103360446,0.35178512482843693,0.05,False,chi_square,total_variation,0.014995614492392367,2.0832070261722494e-116,,1.2499242157033496e-115,True,False,False,False
+type_CASH_IN,0.21969248474606146,0.222236314042982,0.05,False,chi_square,total_variation,0.002543829296920541,8.839988788998723e-06,,1.7679977577997445e-05,True,False,False,False
+type_CASH_OUT,0.3539114191562857,0.32906061606351744,0.05,False,chi_square,total_variation,0.024850803092768242,2.53480984751314e-310,,1.7743668932592e-309,True,False,False,False
+type_DEBIT,0.006413652599001561,0.007498392953317465,0.05,False,chi_square,total_variation,0.0010847403543159215,1.704779691215887e-22,,5.114339073647661e-22,True,False,False,False
+type_PAYMENT,0.3367895103360446,0.35178512482843693,0.05,False,chi_square,total_variation,0.014995614492392367,2.0832070261722494e-116,,1.2499242157033496e-115,True,False,False,False
+type_TRANSFER,0.08319293316260673,0.08941955211174621,0.05,False,chi_square,total_variation,0.00622661894913952,1.8022217801481817e-59,,7.208887120592727e-59,True,False,False,False
+type_UNKNOWN,0.0,0.0,0.05,False,chi_square,total_variation,0.0,1.0,,1.0,False,False,False,False

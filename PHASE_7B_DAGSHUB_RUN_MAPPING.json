@@ -1,0 +1,617 @@
+{
+  "schema_version": 1,
+  "tracking_uri": "https://dagshub.com/elverl/fraud-detection-ml-monitoring.mlflow",
+  "source_database_sha256": "291d310831b6aa3e01f532a386bab62fd0f3b6cc651e5db0de9b853ba32b865d",
+  "mlflow_client_version": "3.16.1",
+  "experiments": {
+    "1": {
+      "remote_experiment_id": "0",
+      "name": "fraud-detection-hyperparameter-optimization"
+    }
+  },
+  "runs": {
+    "7fa24d6ea79f4b6d8f62a07236a351f9": {
+      "local_run_id": "7fa24d6ea79f4b6d8f62a07236a351f9",
+      "remote_run_id": "d4f3816369ce4007bdb1f3dbe5c8a35b",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": null,
+      "status": "verified",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "baseline_model_comparison.csv": "ef0e68095b327f027465b55ffb46a4203a3f534281e7763d1d54526b53693b59",
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "c57992f4eec5cacb0bd453f825c9c5ab76104a0ae84c0dfd0d60add5e38a2142",
+        "phase2_configuration.json": "6ee6906775590818daee82b69fe868684916a5e89261b5dd91f1f70f7ee07a70"
+      },
+      "parameter_count": 7,
+      "metric_record_count": 23,
+      "artifact_count": 4
+    },
+    "33845df18b4a48288e116b0027e6b946": {
+      "local_run_id": "33845df18b4a48288e116b0027e6b946",
+      "remote_run_id": "9afc8a03548b44fc91f9d1d04623ea2b",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": null,
+      "status": "verified",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "baseline_model_comparison.csv": "ef0e68095b327f027465b55ffb46a4203a3f534281e7763d1d54526b53693b59",
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "9d58aa7d2b8f060245bd5d6f15336c0d7d88c9a8f1bb10a4789db94d83d11b71",
+        "phase2_configuration.json": "c5a6f97a41b86793df8cdeda450b21976368937cd656077bcb3e1e548988808c"
+      },
+      "parameter_count": 7,
+      "metric_record_count": 24,
+      "artifact_count": 4
+    },
+    "ac0682a9e54a4f75a3b63cd052a1fdc6": {
+      "local_run_id": "ac0682a9e54a4f75a3b63cd052a1fdc6",
+      "remote_run_id": "db3dbdff9e4c4bfea81f0a777f98a27d",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": null,
+      "status": "verified",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "baseline_model_comparison.csv": "ef0e68095b327f027465b55ffb46a4203a3f534281e7763d1d54526b53693b59",
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "f5b28f6c381fc26f2948c9bec211214c28eedc0191be80f2fa2da77f0c091399",
+        "phase2_configuration.json": "5b3b726aaa964a128e7c0a273983d51cbf3c270f1da67a4738846904d9d0be23"
+      },
+      "parameter_count": 7,
+      "metric_record_count": 24,
+      "artifact_count": 4
+    },
+    "e5b6ee1abaca488095f18010663e5166": {
+      "local_run_id": "e5b6ee1abaca488095f18010663e5166",
+      "remote_run_id": "bd3e9c4ade6a48a69a2b6d76ec6820ff",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": null,
+      "status": "verified",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "baseline_model_comparison.csv": "ef0e68095b327f027465b55ffb46a4203a3f534281e7763d1d54526b53693b59",
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "6e0aa8fa48b5effc3a53583731bfc2288363a253387c87a9e7773c7e089c76e3",
+        "phase2_configuration.json": "196df6e54bb1fa344c60b860afab8a0c54cbfeb3b3c56214def4ed3911e76f7a"
+      },
+      "parameter_count": 7,
+      "metric_record_count": 24,
+      "artifact_count": 4
+    },
+    "d18fbdce26b74ebf97073b110eca54c2": {
+      "local_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "remote_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": null,
+      "status": "verified",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "hyperparameter_search_space.json": "604010d2e30c7ec5a15aefca11e4770576c45f6a90837a9c2713607ee2053cdc",
+        "optimization_trials.csv": "f359c5b8e9901754d52c724c4f1b609696665481779febbdff0756e8b52272f0",
+        "search_summary.json": "4ec01e705ef064daec0b68e6c1dda36949f70665fbf5da78f5ee07363f4a1a3c"
+      },
+      "parameter_count": 8,
+      "metric_record_count": 2,
+      "artifact_count": 3
+    },
+    "c59c39c3a2c94ac09c84ab4910a6971b": {
+      "local_run_id": "c59c39c3a2c94ac09c84ab4910a6971b",
+      "remote_run_id": "75c93c3832ea42d9bc02b2b909470783",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "69405bde4f1a0536b602bfc73885000bef7b5c4d91b6d17e5af915e94ab393fa"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "e2ed011b3ba047e7bded7d278c8b0115": {
+      "local_run_id": "e2ed011b3ba047e7bded7d278c8b0115",
+      "remote_run_id": "10be600c8d5a4a8d9f0f1c12b8257caf",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "490dc59de6698ccb3bc0c939e36de7437608e61b0aa8a2e9fd94172b05103023"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "ec2c94b13a2f4c8b9d28731222d400a7": {
+      "local_run_id": "ec2c94b13a2f4c8b9d28731222d400a7",
+      "remote_run_id": "52af1a87d7aa48b287b81835a1a6e1b5",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "41bcb2c7937bfd0009b3ad823b68a9606765f84acd1c188b7dd3f504860cadbe"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "dfeb3a494f8d46a184212798089f23ec": {
+      "local_run_id": "dfeb3a494f8d46a184212798089f23ec",
+      "remote_run_id": "0252f4072b4049a189cba11f6a1d8c6b",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "acbcb0339995302d9bf34cfd6eeaae4970e30ac547aa31a023968ffd70d40233"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "023cd1c3521a4affbf7912a1ce58fe09": {
+      "local_run_id": "023cd1c3521a4affbf7912a1ce58fe09",
+      "remote_run_id": "e16762cb7561431a957bf71ee77832d0",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "81d2885bc6a62532a42576613f592f4577d82e428b28364d742c593b597f78ee"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "cdeaeffbe978456a93bbf642eeb10b8d": {
+      "local_run_id": "cdeaeffbe978456a93bbf642eeb10b8d",
+      "remote_run_id": "e18431d65d944895ae5094dab6f84434",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "22c43618a746c4900f4c55c049c04a77895ef234c126fabc6e3a3fb29976f370"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "41f73af9dba14a7d97371b548fa1e4b8": {
+      "local_run_id": "41f73af9dba14a7d97371b548fa1e4b8",
+      "remote_run_id": "45561e60e203423a826c7e2295482f99",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "434d9cff307e4c6537fb0c959d4638aff3a6a47bbd247a6fd0af244292b10e9a"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "1fbb627a70de438b8aefa60154a1f57d": {
+      "local_run_id": "1fbb627a70de438b8aefa60154a1f57d",
+      "remote_run_id": "e110513de519433990954d86ddc2f98a",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "18378c4a05ae38bd2f48c94ca1972d9b21592a47ee5b502f583800c5689827ec"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "c11529857b7c4030b5589c588f94008a": {
+      "local_run_id": "c11529857b7c4030b5589c588f94008a",
+      "remote_run_id": "a8d6705d5e604a5c848da30db6149bcc",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "ddf572ac1c7a483e2a569b2fcb26fa1bfe2a39bb6d0f3ca786ba93f24dc5f182"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "3ee468511a6c4f6fb78bfa8693c82928": {
+      "local_run_id": "3ee468511a6c4f6fb78bfa8693c82928",
+      "remote_run_id": "d2adea6b9a6543fdabced2b8180e9a90",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "bca34e21d5bb49f395d4628928e5ce1341c847a913a307749a4681f88156048d"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "1d353308f1e3427094a221667f3da9de": {
+      "local_run_id": "1d353308f1e3427094a221667f3da9de",
+      "remote_run_id": "2adae7bc49f14c12a24fb18c2c87b60a",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "d18fbdce26b74ebf97073b110eca54c2",
+      "status": "verified",
+      "remote_parent_run_id": "878a3434d066496b99434ae4fdbc53dd",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "figures/phase3_confusion_XGBoost.png": "d6b8ac28748781d75382ce66415cbfde39df15f7f33bdb9f4aea8ff53b18faeb",
+        "figures/phase3_pr_XGBoost.png": "cd4481474690de0928c6cdbf76a59de56123822cdbc30be5a50552ee9c3d890e",
+        "figures/phase3_roc_XGBoost.png": "7037a7ebe2bdea08381658d25cd552394ce00ff676290b933926d1dfe64868ca",
+        "metrics.json": "e99c5e56af22562d85ae2c9d0c7cec2b5b3ed817bd54b92b294ba398ec745dfe",
+        "model/XGBoost.ubj": "44a20bc0e2abbd276ae94790db404248d2ab2c5d01025b00b2e4f935b6f220e4",
+        "model_manifest.json": "63252639cfc8a6034b3aadd23025d30bc3b098361815d581d47446b78b5e54ba"
+      },
+      "parameter_count": 18,
+      "metric_record_count": 22,
+      "artifact_count": 7
+    },
+    "4e71a938811f4a86a71292cb6adeb669": {
+      "local_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "remote_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": null,
+      "status": "verified",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "hyperparameter_search_space.json": "604010d2e30c7ec5a15aefca11e4770576c45f6a90837a9c2713607ee2053cdc",
+        "optimization_trials.csv": "3e173bf3632c89d11cf1b575b6d468231dd12fb105d7e7a4dc0a960737f42f1f",
+        "search_summary.json": "54cdbee4d644c59fe74d06ed85b01970ff53eafa47f79f157fef958f9c671e40"
+      },
+      "parameter_count": 8,
+      "metric_record_count": 2,
+      "artifact_count": 3
+    },
+    "17155e8a4c2449c9a8930b67e397e336": {
+      "local_run_id": "17155e8a4c2449c9a8930b67e397e336",
+      "remote_run_id": "5a02b90a33bb45b293626b5ac26a0e19",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "af95c7fe1938b7e8a28d2037703030b0f63d12c590867573a7564816a586d42f"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "54ea51eb9ac44e85af481111bd904cdd": {
+      "local_run_id": "54ea51eb9ac44e85af481111bd904cdd",
+      "remote_run_id": "b38326c126fc4126af4aae3e9acb146d",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "4f2e91df14726505ea4cee7c10b68919825e03f877dfb6ef9def2f2c4a008521"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "3f5e3df5e3fe418ebff49133ceb1d51d": {
+      "local_run_id": "3f5e3df5e3fe418ebff49133ceb1d51d",
+      "remote_run_id": "95bb56ae370e47e392758fec1f5345b8",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "96752f23d44f94e76e82238936e097635f2939bcdc418ac1545455548b993bfa"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "78eabe4bbf1048c482a7cafd7508b3e9": {
+      "local_run_id": "78eabe4bbf1048c482a7cafd7508b3e9",
+      "remote_run_id": "35df3d887fd640c7ab0caac4c6dc1940",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "e78e7460d3dc5e880ca94303d7799c125ae1236ec7e1c853323d73ba1bc4d30e"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "e936815afc094268bf71234ef023100c": {
+      "local_run_id": "e936815afc094268bf71234ef023100c",
+      "remote_run_id": "07b1db054e3946479fd684598ce27688",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "456a44043ff5a5465afd5f84b0b86396de0b241d039cbbe2e0369c59df0beb4e"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "d742fd989af24bf3a71a4c0c60b8bba7": {
+      "local_run_id": "d742fd989af24bf3a71a4c0c60b8bba7",
+      "remote_run_id": "f045f85059dd4ca2b4eba4c7aa5fbab2",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "331edbfcd2ec3d9a8d7be71a8aeac436843c6d8b1237de795aafbebdebc847db"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "dbaf47c49bb54324b1028450609ce4d8": {
+      "local_run_id": "dbaf47c49bb54324b1028450609ce4d8",
+      "remote_run_id": "2b5a1adacd4d431a9a376ec9c9a70fd2",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "7f91f6e84cf7fe5ce05fd6b24a5394c89f1e3df3a25eed46a8b2a6170ab7d31f"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "92a5ca187d1b4fcf92d9c89ffbaa72ad": {
+      "local_run_id": "92a5ca187d1b4fcf92d9c89ffbaa72ad",
+      "remote_run_id": "91c0a256f5c5405780d2f2d1db47edbe",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "72c9b5f0f4fb72f7d6cb7cd88e2ddaaad3d5719dfde8ba26c5b541c48d17157b"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "b4afceed25ca464e9ef3c828cc9baf9a": {
+      "local_run_id": "b4afceed25ca464e9ef3c828cc9baf9a",
+      "remote_run_id": "02ada6ab586d42829fc1f72d83905d7e",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "1e6746625fc0de564c8cad3b58862b90cbff2db4dcec80f709acbf11c969acea"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "c17e19d3d4904ab38316ac9e21395984": {
+      "local_run_id": "c17e19d3d4904ab38316ac9e21395984",
+      "remote_run_id": "7bcd89754f1c421a8109b7bcad438388",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "metrics.json": "720ff15e395099fb855d55ca83019ad26c317e36fde3328586389f20e18b8389"
+      },
+      "parameter_count": 19,
+      "metric_record_count": 22,
+      "artifact_count": 2
+    },
+    "0b450b60eded4bdab40160bd9d4ce3b1": {
+      "local_run_id": "0b450b60eded4bdab40160bd9d4ce3b1",
+      "remote_run_id": "a5eb9dd273a644eb81ee5d163d6e62d8",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": "4e71a938811f4a86a71292cb6adeb669",
+      "status": "verified",
+      "remote_parent_run_id": "d5ead656455c4357a4a13b62cd637bf7",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "feature_list.json": "1daf117cdd1915465d5cf128ea4910af132c997aaa656c0da96706066fb63956",
+        "figures/phase3_confusion_LightGBM.png": "90e0c1d55d2c16de9ef0595cf35b36400549ace60dfdf1782e0ed7134ac8c51f",
+        "figures/phase3_pr_LightGBM.png": "9c94e339af18b0396c290610cbfbb13b2ad4b40093782a13cd408c9ec3348475",
+        "figures/phase3_roc_LightGBM.png": "8822fa6d0fba056ff5be67767e3088301150fc68de5dc6e4d3e5b7c24a0620ed",
+        "metrics.json": "70be26717e1b50a7c513118facc821492e054e4b51de7dca735799ea17913e42",
+        "model/LightGBM.txt": "451c2c591ae23d229bafbd0d2e445e17411e7441d717e2bc8a6860e7d3aafb87",
+        "model_manifest.json": "167da6ffa283fc2f06176b7b2fa38717458424240d2dd763157e652eb762e108"
+      },
+      "parameter_count": 18,
+      "metric_record_count": 22,
+      "artifact_count": 7
+    },
+    "8102e98114514566a47f68945f260aa4": {
+      "local_run_id": "8102e98114514566a47f68945f260aa4",
+      "remote_run_id": "c2c1c8b9980545109145e0bac69282b1",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": null,
+      "status": "verified",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "environment_versions.json": "fc67364130d2aa772b770d767dc860df246bcbddd3aeeb1d5d448e7fdba187fb",
+        "figures/phase3_optimization_history.png": "928f9f8afa46c9cd1e85f661a04adbe3685bcd82a8ddeb1e68fcf9140c7ab6b4",
+        "hyperparameter_search_space.json": "604010d2e30c7ec5a15aefca11e4770576c45f6a90837a9c2713607ee2053cdc",
+        "optimization_trials.csv": "3e173bf3632c89d11cf1b575b6d468231dd12fb105d7e7a4dc0a960737f42f1f",
+        "perfect_performance_sanity_check.md": "eebfd7c6fbbe664b596613268ecde167104dd5ce111ccbdfb1b52b6d4e97695b",
+        "phase3_sanity.json": "622e5293cca25965abe99fd97f6374f953fbee7f97571c2d2f3d34443da5d446",
+        "presentation/03_hyperparameter_optimization.ipynb": "4670a3edcdc4b8de3e9b1c5d76348663056513b2fc7c4c7a24482ff4335f52cc",
+        "presentation/mlflow_dagshub_setup.md": "500b12911bfdd1c31b647398294c82cc79f9b247093f89126ee2c87e22c161e8",
+        "presentation/PHASE_3_OPTIMIZATION_MLFLOW_REPORT.md": "35996255de759b51afde4073b202b6d3a0730f94aa864fbc9eeccc0dd4a99a3e",
+        "provisional_champion.json": "14c6cd2537322f9e710c2b140d63a4fc6a7d5afcb29a70edf36a9f60ba3c2a06",
+        "pyproject.toml": "234a5b7a49e750a44c69607ef0f6de09f73f0bc63e09ac8e8b090b1807f872cf",
+        "sanity_simple_rules.csv": "07980a06f40d23cc09198aea43b729a259db2d7ee554488aacfa5687f8f6b9a1",
+        "sanity_univariate_features.csv": "b164fd12f29b731c68ab23a5eb67e7183940fadc966f096a37e748acd7a5a0a8",
+        "source/features.py": "73badebaa186e2fc323fd6c46de784b5002c380dca7ac360a70f7a9a32c0f28a",
+        "source/optimization.py": "b577274b381ccedc4f470f7aab431a74ea29f763c0e25773d879d2a00f380db2",
+        "source/run_optimization.py": "1da98d936372bd492835a89ba75f281fc8448ff65362829a8b1240389cdfce8b",
+        "source/tracking.py": "78ab9b1573daf63379964c97ebea0a1a7a7f18e139bb138fc91e8ea26f12049e",
+        "tuned_model_comparison.csv": "7ea3fd6113d642c5752e27c04ded23dde23a19e4910157990d0d8cacb94411d5",
+        "uv.lock": "1b8f13111eeac494a2c8df75ef74dbab48a5d37ef6fef0864b53395a9fd7611d"
+      },
+      "parameter_count": 0,
+      "metric_record_count": 2,
+      "artifact_count": 19
+    },
+    "4823399689d0480eac371aa8de02016b": {
+      "local_run_id": "4823399689d0480eac371aa8de02016b",
+      "remote_run_id": "23096b117e7c4dda88ec9317091e29e0",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": null,
+      "status": "verified",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "figures/dependence_amount.png": "9cfea93265454b3b34d4b616aed24b87e89396f575d1947bda1993ca4f764b19",
+        "figures/dependence_amount_to_oldbalanceOrg.png": "1338707fa3a147950c7759b0d2407057e556b65b143fbc5047eb0cb62120cef4",
+        "figures/dependence_orig_balance_emptied.png": "f41c437b14c49aa084dfbfb0f2ec7465af0928668d74598cb22746767c3b6acc",
+        "figures/shap_beeswarm.png": "d71e0699f8329e7f7f3f8bd85c88b4bbd577ede7bea319afe4b38b868c35811d",
+        "figures/shap_global_bar.png": "8b8f062ac51db66f5c87f069a68c85d4f7ab144548d6211a72d5e05b67f70fb5",
+        "figures/shap_prevalence_weighted_bar.png": "a4c3fe9ae8e1514af66b4cc5c238d6bf5cab74e43d23b696058117fcda2f06ae",
+        "figures/waterfall_A_high_score_TP.png": "e9a1a37692d6a73a9e3a9d09f56a888a5520e213b1c1494d9b88fe825d7161e0",
+        "figures/waterfall_B_low_score_TN.png": "9d0e45efd6963a7c73fa0ffdd93d4de4beb75a5d5a471bbb3f05071ccc935e3a",
+        "figures/waterfall_C_false_negative.png": "f61aa4194d9db47a050eaaed966008c635ac523b7283c3a3fed4e9f43c8e837b",
+        "figures/waterfall_E_non_rule_TP.png": "ec256553f04b1aac06dc6a40388563eb8803334d1d1e1b9b8b5370fdee62be9d",
+        "figures/waterfall_F_nearest_reference_threshold.png": "c3b4c0a9fa1d493a9c8db0eeccf49127b239857973c5b905529c0af2c79ce8a1",
+        "interpretability_summary.json": "11273a791ceb63d58278b06729a5b0e30d1a50f86c22219caa57312a9325e43c",
+        "local_explanations.csv": "db1ca6da7cdb4a94c9bdb84cae18ea41f137d2e9d0a3d9aeb0b75cec462000e0",
+        "non_rule_fraud_explanations.csv": "13b4aad3e777b1937573bc6b084ef0c0dbd46caef714afa6f519281c6531d437",
+        "presentation/04_interpretability.ipynb": "59f0c3cd50f3d7d9f3f83f0a1fe32053ef6bc3793c38951e96f1406c6d6a1a4c",
+        "presentation/model_interpretability.md": "b15c517a2d9210a6fd5d60c7f9b803dbae826cafe8d90455bc46fa5d831454ec",
+        "presentation/PHASE_4_INTERPRETABILITY_REPORT.md": "7dbba2037a4e0899f6ee6ae6a03e49960ca6c6d6ebd1bc8057adb14fbacfe20b",
+        "shap_feature_directions.csv": "d0478e1a68582e5a4942a696bf9080ebedbc6cb7d03e8cc97907100ca76683fe",
+        "shap_global_importance.csv": "45700179c3e64d6ed4936c4d4f8e6368166422785ceb9b1564b33ff326ab9cd2",
+        "shap_group_comparison.csv": "1adbaac5d9e43bf3db01ee90d2c8de45cb91c2eacd73c9b62e615735e2d6daa2",
+        "source/interpretability.py": "bad08de81832d2a57e5e96a959a7fe6a2a34b608742865cb0fcc92f47f72b596",
+        "source/pyproject.toml": "37e8ae603902e570216b04bca54951790b89578bc87149c964f720f1517aadbb",
+        "source/run_interpretability.py": "37d13d28f00c65a57afafe14e5a6c8680e3c5f80bed1563fff70cda8500ed1f2",
+        "source/uv.lock": "8ff4299a1cf0b84be00713234ef9a5fc67651c722a24616a1cb46e833d8fdd13"
+      },
+      "parameter_count": 9,
+      "metric_record_count": 4,
+      "artifact_count": 24
+    },
+    "c8f4505245614c4e97bd931fb75f4749": {
+      "local_run_id": "c8f4505245614c4e97bd931fb75f4749",
+      "remote_run_id": "361a332f41a44e679ebd70d7ea476603",
+      "local_experiment_id": "1",
+      "remote_experiment_id": "0",
+      "local_parent_run_id": null,
+      "status": "verified",
+      "metadata_uploaded": true,
+      "uploaded_artifacts": {
+        "data_drift_features.csv": "a15ec88fcd7d7df5747b3b19957fb64df870bdae749906588d2d4e423f1e1078",
+        "figures/production_evolution.png": "3efaac23f4195546b372630a9278d96eebe19deebf3d3977cf5d7acb14a4560f",
+        "figures/score_distributions.png": "44dba982e1b1e8c8027aedab6ca6192a8bbbb7c4798f00eae229a9bb466ec9fc",
+        "html/data_drift.html": "d6c618b918602057f9c1025b747962c2d70998c75ab436d59d3c889233a4fc3a",
+        "html/evidently_data_drift.html": "37a049e9be829721be1660d5ef9ebd84f0d94c73af160e75806a99f2f37980ed",
+        "html/evidently_prediction_drift.html": "b11cf2096f7439dfaad17286fe0683694af6d1949ba565f11811ae77cfb8d0c0",
+        "html/performance_monitoring.html": "1737d14c34ebd8785a574924bf33058af881679a9833f5a7be78cfbee6b71bfd",
+        "html/prediction_drift.html": "88e3a882e23d4cf8a4ca32279e1130b29ee730d050c0dd7a2769e71277d37e56",
+        "monitoring_atypical_cases.csv": "351099dbd00aafb701f232f2e3344187831847ded79530cc4813d36f413b414c",
+        "monitoring_by_type.csv": "e0f5dafb3c84d43effa2ea471466c7c63bf409ed1175535de8629b28fab13fba",
+        "monitoring_relation_checks.csv": "704c5466fba90ce64065b7df0df8de41b30152a258426df08659615dfc9f69f3",
+        "monitoring_scores.csv": "a7899f1e420a411eaac29a08a821bcea37020f6de03c5afa5d497b535099eb41",
+        "monitoring_summary.json": "58b243eda988019227cfc166918692cda34fb58a036dcfe6e0111c5166c71f5f",
+        "monitoring_windows.csv": "a42b5bf449dbe6ce5df0e898cba421b4c9d70f7a837cb8bdde12a767ddf6de59",
+        "presentation_and_source/05_monitoring.ipynb": "50496876ca41d06fab03a37762fa7aa194f97cf323ee86fb74a3ac16e7e5fc2d",
+        "presentation_and_source/build_phase5_report.py": "6fe304aeb9ac13fbf6f4fde830c9fc6d1b1a42e2a476186a6c833b411bce7359",
+        "presentation_and_source/freeze_monitoring_model.py": "1865615acb596d36fee6b291b80f70c7805c5fd5480bce35c27b2e99690e65f7",
+        "presentation_and_source/monitoring.py": "892f7a8cc6afdfd9f258995253ceceefeaeba98eb53a48744d8baee749d3b4ca",
+        "presentation_and_source/PHASE_5_MONITORING_REPORT.md": "417c631fb408374f2ab934419d8720b8af35ee3bc182483d96fa290114211cff",
+        "presentation_and_source/pyproject.toml": "ebf0c50f034eef11d4713518a34f67fc19f61fe3c0c24702844feade5fe17e44",
+        "presentation_and_source/run_monitoring.py": "46d5275ce09db85e39c9eae5bcb6647da9ed6636c686a781c7db0dbc71308fb0",
+        "presentation_and_source/uv.lock": "5d07526b26c631e5fa619209828cb96bd14740258ff300ad5dea40dae4b8c5b9",
+        "production_model_comparison.csv": "4bc8c88c0b8d3f7a0752d62cf57ec8b476a364f8449e5e4e1ae24ba884b8985a",
+        "production_monitoring_freeze.json": "dc86721b01845d98a59f1dffe3e29c9f9a89847365803e1d13ff0ed110c17ae6",
+        "production_step_profile.csv": "26759e08adbf07f1f5a5eb317e717869de9a7d9320509df34a8c3b93507eb6fe",
+        "type_conditioned_drift.csv": "c9cac57903315e4a670f034421273c7ef614e5fca4b73aecbf9225225a1a0800"
+      },
+      "parameter_count": 8,
+      "metric_record_count": 28,
+      "artifact_count": 26
+    }
+  },
+  "status": "verified",
+  "verified_at_utc": "2026-10-16T04:39:56.146983+00:00"
+}

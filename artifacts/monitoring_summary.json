@@ -1,0 +1,213 @@
+{
+  "status": "COMPLETE",
+  "model_sha256": "44a20bc0e2abbd276ae94790db404248d2ab2c5d01025b00b2e4f935b6f220e4",
+  "freeze_sha256": "450f59d14924daadee8db2c4e85c8ac0c6cee79ea10a4104cba46f2eb7310726",
+  "production": {
+    "rows": 575590,
+    "frauds": 3736,
+    "step_min": 401,
+    "step_max": 743,
+    "metrics": {
+      "observations": 575590,
+      "frauds": 3736,
+      "prevalence": 0.006490731249674247,
+      "pr_auc": 0.9998817696921924,
+      "roc_auc": 0.9999990261867279,
+      "precision_05": 1.0,
+      "recall_05": 0.9965203426124197,
+      "f1_05": 0.9982571390266792,
+      "f2_05": 0.9972143354582954,
+      "tp": 3723,
+      "fp": 0,
+      "tn": 571854,
+      "fn": 13,
+      "alerts": 3723,
+      "alert_rate": 0.00646814572873052,
+      "support_warning": "",
+      "k_0.1pct": 576,
+      "precision_top_0.1pct": 1.0,
+      "recall_top_0.1pct": 0.15417558886509636,
+      "k_0.5pct": 2878,
+      "precision_top_0.5pct": 1.0,
+      "recall_top_0.5pct": 0.7703426124197003,
+      "k_1pct": 5756,
+      "precision_top_1pct": 0.6490618485059069,
+      "recall_top_1pct": 1.0
+    }
+  },
+  "validation": {
+    "observations": 1398242,
+    "frauds": 868,
+    "prevalence": 0.0006207795217136947,
+    "pr_auc": 0.9999185900788442,
+    "roc_auc": 0.9999999719684873,
+    "precision_05": 1.0,
+    "recall_05": 0.9988479262672811,
+    "f1_05": 0.9994236311239193,
+    "f2_05": 0.9990781286010602,
+    "tp": 867,
+    "fp": 0,
+    "tn": 1397374,
+    "fn": 1,
+    "alerts": 867,
+    "alert_rate": 0.0006200643379329187,
+    "support_warning": "",
+    "k_0.1pct": 1399,
+    "precision_top_0.1pct": 0.6204431736954967,
+    "recall_top_0.1pct": 1.0,
+    "k_0.5pct": 6992,
+    "precision_top_0.5pct": 0.12414187643020595,
+    "recall_top_0.5pct": 1.0,
+    "k_1pct": 13983,
+    "precision_top_1pct": 0.06207537724379604,
+    "recall_top_1pct": 1.0
+  },
+  "reference": {
+    "rows": 5787030,
+    "frauds": 4477,
+    "prevalence": 0.0007736265407298736,
+    "inference_seconds": 0.4670186000003014
+  },
+  "production_inference_seconds": 0.05962519999957294,
+  "drift_features": 0,
+  "statistical_shift_features": 12,
+  "psi_review_features": 0,
+  "score_shift": {
+    "reference_KS_D": 0.08917626738548279,
+    "reference_p": 0.0,
+    "validation_KS_D": 0.033061683177948,
+    "validation_p": 0.0
+  },
+  "type_composition": {
+    "statistic": 1619.845317829659,
+    "p_value": 0.0,
+    "total_variation": 0.024850803092768266,
+    "categories": 5
+  },
+  "evidently": {
+    "version": "0.7.23",
+    "status": "COMPLETE",
+    "reference_sample_rows": 25000,
+    "current_sample_rows": 25000,
+    "method": "PSI threshold 0.2 on reproducible uniform samples; supplementary, not the full-data primary decision",
+    "files": [
+      "evidently_data_drift.html",
+      "evidently_prediction_drift.html"
+    ]
+  },
+  "windows": [
+    {
+      "window": 0,
+      "step_min": 401,
+      "step_max": 472,
+      "observations": 243078,
+      "frauds": 806,
+      "support_warning": ""
+    },
+    {
+      "window": 1,
+      "step_min": 473,
+      "step_max": 544,
+      "observations": 111182,
+      "frauds": 742,
+      "support_warning": ""
+    },
+    {
+      "window": 2,
+      "step_min": 545,
+      "step_max": 616,
+      "observations": 125005,
+      "frauds": 776,
+      "support_warning": ""
+    },
+    {
+      "window": 3,
+      "step_min": 617,
+      "step_max": 688,
+      "observations": 62572,
+      "frauds": 770,
+      "support_warning": ""
+    },
+    {
+      "window": 4,
+      "step_min": 689,
+      "step_max": 743,
+      "observations": 33753,
+      "frauds": 642,
+      "support_warning": ""
+    }
+  ],
+  "atypical": {
+    "fraud_amount_zero": 12,
+    "amount_zero_detected": 0,
+    "outside_rule_frauds": 103,
+    "outside_rule_detected": 90,
+    "maximum_legitimate_score": 0.07913318276405334
+  },
+  "concept_drift": "Concept drift not conclusively established.",
+  "model_changed": false,
+  "production_used_for_optimization": false,
+  "top_k_capacity_limits": {
+    "0.001": 0.15417558886509636,
+    "0.005": 0.7703426124197003,
+    "0.01": 1
+  },
+  "previous_phase_hashes": {
+    "PHASE_2_MODELING_REPORT.md": "d95c8e5fdcd5573e9a9754db22bf74e84e81ae33dc5d52a1ef66fe0dc917ab9b",
+    "PHASE_3_OPTIMIZATION_MLFLOW_REPORT.md": "572535a41883e5d708a40d91d203d01307031a2b80ca4145b203dfd47717f384",
+    "PHASE_4_INTERPRETABILITY_REPORT.md": "54875a387d350220ec7a48542d9df6310c64559e9beca114ba4ec517f60a76c6",
+    "artifacts/phase3_run.json": "21d9d8636e0dcf3582f7a0f0baaa7e0a090ddbb579037ac2ceaf60c8d1efc22e",
+    "src/fraud_detection/features.py": "73badebaa186e2fc323fd6c46de784b5002c380dca7ac360a70f7a9a32c0f28a",
+    "src/fraud_detection/modeling.py": "e14378a4b51691ef03bdebc45c7018a83a2ce1832d503c19544c8d4d7e69cfc3",
+    "src/fraud_detection/optimization.py": "b577274b381ccedc4f470f7aab431a74ea29f763c0e25773d879d2a00f380db2",
+    "notebooks/02_ml_training.ipynb": "a218b5876486836627e46c27e1ed6948e39b5352a8208abe57a0c0406a9063dc",
+    "notebooks/03_hyperparameter_optimization.ipynb": "14ff3f28b32e467e12416ae1cd828a8d231fa3139033c4aae84e8d9736e24450",
+    "notebooks/04_interpretability.ipynb": "a0e1c9805fe5089adba9b2f430571e0b5a67ec75f8e24a4169b728176e332bdd"
+  },
+  "versions": {
+    "evidently": "0.7.23",
+    "xgboost": "3.4.1",
+    "scipy": "1.18.1",
+    "pandas": "3.0.6"
+  },
+  "mlflow": {
+    "run_id": "c8f4505245614c4e97bd931fb75f4749",
+    "experiment_id": "1",
+    "tracking_uri": "sqlite:///./mlruns/mlflow.db",
+    "historical_hashes": {
+      "7fa24d6ea79f4b6d8f62a07236a351f9": "453ccd888c5cc457b7124a8ae45d5e6238cfd540ba64414618802b310ec9c3b6",
+      "33845df18b4a48288e116b0027e6b946": "09a40d866fb9cfbce053f292aed8bf7b89b622107c10c8d41505bbd85f294f89",
+      "ac0682a9e54a4f75a3b63cd052a1fdc6": "3ab569a3165c503ee90cdd02017172d93ad01e67491b3585b8b75f8e62bf9a6c",
+      "e5b6ee1abaca488095f18010663e5166": "a907fd98739d8429e8d026ae4d1f0368e514806e82b1730f56198987e4344959",
+      "d18fbdce26b74ebf97073b110eca54c2": "8d2f6dd48340297dc42609e20880dffe97dbc937ab74202ca6f8293db84b27bc",
+      "c59c39c3a2c94ac09c84ab4910a6971b": "d4af3dc155bc6221ae8e8104cfe2a38cdaf72b009867f02ec5d76b41972c7fd9",
+      "e2ed011b3ba047e7bded7d278c8b0115": "762b8bdb9458cfe7c0be43156ec86b601715cc2a0760ec02027aee94533b280e",
+      "ec2c94b13a2f4c8b9d28731222d400a7": "65988ac2af5fc123a45bb258733b6a49e6c345146db18e411b4145651d533802",
+      "dfeb3a494f8d46a184212798089f23ec": "0c2d0609667ffd018c0e029d519a60e85b5e879dadcdb96e7e850741970da16e",
+      "023cd1c3521a4affbf7912a1ce58fe09": "73981c229e5e7dfe3c0e7e20d3c78c07479c46e3a50c84a2681cbd33be60155c",
+      "cdeaeffbe978456a93bbf642eeb10b8d": "d3a5eabaf4397fa3d412176252efd6cf749ae51678fffe9ed4e58f29ddde4b73",
+      "41f73af9dba14a7d97371b548fa1e4b8": "e723a1d7defc07b2a29e4154ec5a40a1a69d7942184806f83fce82514a97380d",
+      "1fbb627a70de438b8aefa60154a1f57d": "796fba56069855ddf202ab315a324715f836eac40c8fa334a497178c85fdbfde",
+      "c11529857b7c4030b5589c588f94008a": "4b7ca2aabd98632e7b4ac21d85ca616ce5be0e88b22ac92c22468d41f5c4f7d3",
+      "3ee468511a6c4f6fb78bfa8693c82928": "617a2f79ffe38dbb187100813a0a63ec0b557c96022afecedad883939ee9e26b",
+      "1d353308f1e3427094a221667f3da9de": "2014d8a923725d090741a2a19e8da627f496713c7bb48a5dc26e32e14da29da1",
+      "4e71a938811f4a86a71292cb6adeb669": "9bb4b0f61c6ff14cf79ee021851cfad64c85fbff389e8e92ce1150ce8f93f1a1",
+      "17155e8a4c2449c9a8930b67e397e336": "4696112f0c285fbed531baf385e1a0c4890d0f32007008ed84058be728e36b5a",
+      "54ea51eb9ac44e85af481111bd904cdd": "c84b251c647b98aff23bad11d60c28da8953e9675ba04185419ffe6f3981e3f0",
+      "3f5e3df5e3fe418ebff49133ceb1d51d": "ae28a6136e0f9e3fa2a7dedcdbadfc265b943b962fc2328d5b5f25e8567b5b92",
+      "78eabe4bbf1048c482a7cafd7508b3e9": "b084e37aa695923e453f1c3f719e7984a53f4f4d53a21834d24ec80de973d8ce",
+      "e936815afc094268bf71234ef023100c": "236a57030abdc4a15f95e035841ab3395171f455e86de533b8c76cc5621cff16",
+      "d742fd989af24bf3a71a4c0c60b8bba7": "24c1dc6a4e4397e574a68aede1ff39b2e692da22786ad84986f4c5e67d8623fa",
+      "dbaf47c49bb54324b1028450609ce4d8": "8f2e80157d90ed18ea57a22c6c7cb6c907e282db1dd5f8f200a44ee54ad7ba69",
+      "92a5ca187d1b4fcf92d9c89ffbaa72ad": "c33a52573aaf6338b4d751bfc9e2362c112a4dbf4b427e640b92ec875b0b4fde",
+      "b4afceed25ca464e9ef3c828cc9baf9a": "3a5348c4ad63d4931923c240c9dae63af68cbef86b1dd8b3f0df2b4f026ff6f5",
+      "c17e19d3d4904ab38316ac9e21395984": "524b5e005eac46b7a44b951c7cfda3888e143bc0234dd7bd4d9187f110825c8f",
+      "0b450b60eded4bdab40160bd9d4ce3b1": "58aaa061799d209a305f94ae3fa0ee0c0c4fc15c64556611309903092b9035f9",
+      "8102e98114514566a47f68945f260aa4": "b49fc0f8dbd42d1f73cdef0208030d38d67c5553102eb9e11bbc9bd749847cf0",
+      "4823399689d0480eac371aa8de02016b": "58c210bcaa6006abe0b264ced64d5dc6dc2a8385c18f2a8a2294e51df0eb1864"
+    },
+    "historical_runs_unchanged": true,
+    "run_status": "FINISHED"
+  },
+  "total_seconds": 61.64500229999976
+}

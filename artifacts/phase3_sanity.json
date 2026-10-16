@@ -1,0 +1,52 @@
+{
+  "verified_rows": {
+    "train": 4388788,
+    "validation": 1398242
+  },
+  "exact_reconstruction": true,
+  "prohibited_column_mutation_invariant": true,
+  "train_steps": [
+    1,
+    320
+  ],
+  "validation_steps": [
+    321,
+    400
+  ],
+  "shared_rows": false,
+  "shared_rows_evidence": "Strictly disjoint step values; exact rows include step; Phase 1 found no exact duplicates",
+  "production_used": false,
+  "feature_names": [
+    "step",
+    "amount",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "amount_to_oldbalanceOrg",
+    "orig_balance_zero",
+    "orig_balance_emptied",
+    "dest_is_merchant",
+    "type_CASH_IN",
+    "type_CASH_OUT",
+    "type_DEBIT",
+    "type_PAYMENT",
+    "type_TRANSFER",
+    "type_UNKNOWN"
+  ],
+  "preprocessing_review": "Row-local features have no fit; logistic StandardScaler fitted by Pipeline on Train only",
+  "matrix_sha256": {
+    "train_X.npy": "4a74d6444772904aa01e524e178627c1e4c5b6efb8443c5da7870cd0a8da16e9",
+    "train_y.npy": "d6500bdffc2eb7fdb7a93fe92ee66224e48305c88adc8a935a917a3351239647",
+    "validation_X.npy": "dc1066ec7f9d3cd8cea756c9dc4ae6b7d5dd94b7d7e2a9f8b1344cab3bcfb2dd",
+    "validation_y.npy": "32f5950840801da44ba733ced3aa5b7b1b52ff463cc8e21ad6d677479c19cb29"
+  },
+  "phase2_source_sha256": {
+    "src/fraud_detection/features.py": "73badebaa186e2fc323fd6c46de784b5002c380dca7ac360a70f7a9a32c0f28a",
+    "src/fraud_detection/modeling.py": "e14378a4b51691ef03bdebc45c7018a83a2ce1832d503c19544c8d4d7e69cfc3",
+    "scripts/run_baselines.py": "214fdac476209b002446ba32222f442df65a3f4c0b0c8600f745667583d860e6",
+    "PHASE_2_MODELING_REPORT.md": "d95c8e5fdcd5573e9a9754db22bf74e84e81ae33dc5d52a1ef66fe0dc917ab9b"
+  },
+  "all_fraud_development_steps": 137,
+  "all_fraud_step_transactions": 1524,
+  "seconds": 61.56280160000097,
+  "conclusion": "B: No implementation leakage detected; near-deterministic simulator patterns. C: Operational availability and external validity remain uncertain."
+}

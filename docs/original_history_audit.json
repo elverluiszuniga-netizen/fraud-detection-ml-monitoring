@@ -1,0 +1,293 @@
+{
+  "refs": [
+    "refs/heads/development 806f24b4ebe414e4dc39590057d46ca351feba08",
+    "refs/heads/main 4ea3a5fba48b2ba27b7ab4162f82cfbfd9c8baeb"
+  ],
+  "commits": [
+    "4ea3a5fba48b2ba27b7ab4162f82cfbfd9c8baeb",
+    "22b49c526a588fbd9037439243d1c75fa08ff588",
+    "18acda61bc935bb06c48115cebb72293eb443e6d",
+    "c22bd9f65bc10bf6d031ac956cb454ac36b8a385",
+    "806f24b4ebe414e4dc39590057d46ca351feba08"
+  ],
+  "object_count": 203,
+  "blob_count": 164,
+  "largest_blob_bytes": 4090362,
+  "unreachable_objects": [],
+  "private_objects": [
+    {
+      "oid": "0a207376c812f180090de73be808cc3c5914001a",
+      "type": "blob",
+      "paths": [
+        "reports/audit_results.json"
+      ],
+      "occurrences": 1
+    },
+    {
+      "oid": "1627b29f8e4e6afe1c3d1c75233e4cee6a917dab",
+      "type": "blob",
+      "paths": [
+        "artifacts/production_monitoring_freeze.json"
+      ],
+      "occurrences": 1
+    },
+    {
+      "oid": "2ff5416e38137a1f086f86c509ef6f99c361088d",
+      "type": "blob",
+      "paths": [
+        "artifacts/monitoring_summary.json"
+      ],
+      "occurrences": 1
+    },
+    {
+      "oid": "35dc2fcdf95a9f59992a206a5dd7696f1f9a048d",
+      "type": "blob",
+      "paths": [
+        "notebooks/05_monitoring.ipynb"
+      ],
+      "occurrences": 6
+    },
+    {
+      "oid": "36f71cb6f87d6f5d9ca33dd6e16c5b8304bec5c8",
+      "type": "blob",
+      "paths": [
+        "artifacts/phase3_run.json"
+      ],
+      "occurrences": 2
+    },
+    {
+      "oid": "4ad1c8a67d4182765754471d8a09f096d715d094",
+      "type": "blob",
+      "paths": [
+        "INITIAL_DATA_AUDIT.md"
+      ],
+      "occurrences": 1
+    },
+    {
+      "oid": "58f0c706fe9b085c5d3a98bb9e34e4e08eeb6940",
+      "type": "blob",
+      "paths": [
+        "PHASE_5_MONITORING_REPORT.md"
+      ],
+      "occurrences": 5
+    },
+    {
+      "oid": "6780603ca53ca537fc6a7c988bcf4bd328889dd3",
+      "type": "blob",
+      "paths": [
+        "notebooks/03_hyperparameter_optimization.ipynb"
+      ],
+      "occurrences": 1
+    },
+    {
+      "oid": "743d341b33d01d268fd7ebc77899878198f91d9e",
+      "type": "blob",
+      "paths": [
+        "PHASE_3_OPTIMIZATION_MLFLOW_REPORT.md"
+      ],
+      "occurrences": 3
+    },
+    {
+      "oid": "743f75fbba74a7b616b2f995ac642335f5eba54b",
+      "type": "blob",
+      "paths": [
+        "artifacts/interpretability_summary.json"
+      ],
+      "occurrences": 2
+    },
+    {
+      "oid": "76240f3561a4adc4a33baf6b99cd88b5bb972a19",
+      "type": "blob",
+      "paths": [
+        "notebooks/04_interpretability.ipynb"
+      ],
+      "occurrences": 2
+    },
+    {
+      "oid": "8e3c4e3b27b9b3191dcef23097a22aa56bbb347b",
+      "type": "blob",
+      "paths": [
+        "docs/model_interpretability.md"
+      ],
+      "occurrences": 1
+    },
+    {
+      "oid": "c6aecb11a3a13f74bcc5d90aee9042990234dbac",
+      "type": "blob",
+      "paths": [
+        "PHASE_7_DELIVERY_AUDIT.md"
+      ],
+      "occurrences": 1
+    },
+    {
+      "oid": "d945d15f81d5d186b62357bed8b8fd78efc2efd0",
+      "type": "blob",
+      "paths": [
+        "PHASE_4_INTERPRETABILITY_REPORT.md"
+      ],
+      "occurrences": 6
+    },
+    {
+      "oid": "e671a74dbd054d1abf7e060d15b081e4320752be",
+      "type": "blob",
+      "paths": [
+        "artifacts/phase2_run.json"
+      ],
+      "occurrences": 1
+    }
+  ],
+  "affected_commits": [
+    {
+      "commit": "4ea3a5fba48b2ba27b7ab4162f82cfbfd9c8baeb",
+      "private_files": [
+        {
+          "path": "INITIAL_DATA_AUDIT.md",
+          "oid": "4ad1c8a67d4182765754471d8a09f096d715d094"
+        },
+        {
+          "path": "reports/audit_results.json",
+          "oid": "0a207376c812f180090de73be808cc3c5914001a"
+        }
+      ]
+    },
+    {
+      "commit": "22b49c526a588fbd9037439243d1c75fa08ff588",
+      "private_files": [
+        {
+          "path": "INITIAL_DATA_AUDIT.md",
+          "oid": "4ad1c8a67d4182765754471d8a09f096d715d094"
+        },
+        {
+          "path": "PHASE_3_OPTIMIZATION_MLFLOW_REPORT.md",
+          "oid": "743d341b33d01d268fd7ebc77899878198f91d9e"
+        },
+        {
+          "path": "PHASE_4_INTERPRETABILITY_REPORT.md",
+          "oid": "d945d15f81d5d186b62357bed8b8fd78efc2efd0"
+        },
+        {
+          "path": "PHASE_5_MONITORING_REPORT.md",
+          "oid": "58f0c706fe9b085c5d3a98bb9e34e4e08eeb6940"
+        },
+        {
+          "path": "artifacts/interpretability_summary.json",
+          "oid": "743f75fbba74a7b616b2f995ac642335f5eba54b"
+        },
+        {
+          "path": "artifacts/monitoring_summary.json",
+          "oid": "2ff5416e38137a1f086f86c509ef6f99c361088d"
+        },
+        {
+          "path": "artifacts/phase2_run.json",
+          "oid": "e671a74dbd054d1abf7e060d15b081e4320752be"
+        },
+        {
+          "path": "artifacts/phase3_run.json",
+          "oid": "36f71cb6f87d6f5d9ca33dd6e16c5b8304bec5c8"
+        },
+        {
+          "path": "artifacts/production_monitoring_freeze.json",
+          "oid": "1627b29f8e4e6afe1c3d1c75233e4cee6a917dab"
+        },
+        {
+          "path": "docs/model_interpretability.md",
+          "oid": "8e3c4e3b27b9b3191dcef23097a22aa56bbb347b"
+        },
+        {
+          "path": "notebooks/03_hyperparameter_optimization.ipynb",
+          "oid": "6780603ca53ca537fc6a7c988bcf4bd328889dd3"
+        },
+        {
+          "path": "notebooks/04_interpretability.ipynb",
+          "oid": "76240f3561a4adc4a33baf6b99cd88b5bb972a19"
+        },
+        {
+          "path": "notebooks/05_monitoring.ipynb",
+          "oid": "35dc2fcdf95a9f59992a206a5dd7696f1f9a048d"
+        },
+        {
+          "path": "reports/audit_results.json",
+          "oid": "0a207376c812f180090de73be808cc3c5914001a"
+        }
+      ]
+    },
+    {
+      "commit": "18acda61bc935bb06c48115cebb72293eb443e6d",
+      "private_files": [
+        {
+          "path": "INITIAL_DATA_AUDIT.md",
+          "oid": "4ad1c8a67d4182765754471d8a09f096d715d094"
+        },
+        {
+          "path": "PHASE_3_OPTIMIZATION_MLFLOW_REPORT.md",
+          "oid": "743d341b33d01d268fd7ebc77899878198f91d9e"
+        },
+        {
+          "path": "PHASE_4_INTERPRETABILITY_REPORT.md",
+          "oid": "d945d15f81d5d186b62357bed8b8fd78efc2efd0"
+        },
+        {
+          "path": "PHASE_5_MONITORING_REPORT.md",
+          "oid": "58f0c706fe9b085c5d3a98bb9e34e4e08eeb6940"
+        },
+        {
+          "path": "PHASE_7_DELIVERY_AUDIT.md",
+          "oid": "c6aecb11a3a13f74bcc5d90aee9042990234dbac"
+        },
+        {
+          "path": "artifacts/interpretability_summary.json",
+          "oid": "743f75fbba74a7b616b2f995ac642335f5eba54b"
+        },
+        {
+          "path": "artifacts/monitoring_summary.json",
+          "oid": "2ff5416e38137a1f086f86c509ef6f99c361088d"
+        },
+        {
+          "path": "artifacts/phase2_run.json",
+          "oid": "e671a74dbd054d1abf7e060d15b081e4320752be"
+        },
+        {
+          "path": "artifacts/phase3_run.json",
+          "oid": "36f71cb6f87d6f5d9ca33dd6e16c5b8304bec5c8"
+        },
+        {
+          "path": "artifacts/production_monitoring_freeze.json",
+          "oid": "1627b29f8e4e6afe1c3d1c75233e4cee6a917dab"
+        },
+        {
+          "path": "docs/model_interpretability.md",
+          "oid": "8e3c4e3b27b9b3191dcef23097a22aa56bbb347b"
+        },
+        {
+          "path": "notebooks/03_hyperparameter_optimization.ipynb",
+          "oid": "6780603ca53ca537fc6a7c988bcf4bd328889dd3"
+        },
+        {
+          "path": "notebooks/04_interpretability.ipynb",
+          "oid": "76240f3561a4adc4a33baf6b99cd88b5bb972a19"
+        },
+        {
+          "path": "notebooks/05_monitoring.ipynb",
+          "oid": "35dc2fcdf95a9f59992a206a5dd7696f1f9a048d"
+        },
+        {
+          "path": "reports/audit_results.json",
+          "oid": "0a207376c812f180090de73be808cc3c5914001a"
+        }
+      ]
+    }
+  ],
+  "secret_candidates": [],
+  "synthetic_url_fixtures": [
+    {
+      "oid": "ab4283e9058e931917984dd80fb5960dbd544348",
+      "paths": [
+        "tests/test_optimization.py"
+      ],
+      "kind": "url_credentials",
+      "line": 125
+    }
+  ],
+  "prohibited_files": [],
+  "oversized_blobs": []
+}

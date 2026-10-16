@@ -1,0 +1,137 @@
+{
+  "algorithms": {
+    "XGBoost": {
+      "n_estimators": [
+        "int",
+        80,
+        200,
+        "Upper bound on boosting rounds; early stopping may use fewer"
+      ],
+      "max_depth": [
+        "int",
+        3,
+        7,
+        "Bound tree complexity"
+      ],
+      "learning_rate": [
+        "log",
+        0.03,
+        0.15,
+        "Moderate shrinkage"
+      ],
+      "min_child_weight": [
+        "log",
+        0.5,
+        10.0,
+        "Leaf Hessian regularization"
+      ],
+      "subsample": [
+        "float",
+        0.8,
+        1.0,
+        "Controlled row sampling inside Train"
+      ],
+      "colsample_bytree": [
+        "float",
+        0.8,
+        1.0,
+        "Controlled feature sampling"
+      ],
+      "reg_alpha": [
+        "log",
+        0.0001,
+        1.0,
+        "L1 regularization"
+      ],
+      "reg_lambda": [
+        "log",
+        0.5,
+        5.0,
+        "L2 regularization"
+      ],
+      "gamma": [
+        "float",
+        0.0,
+        1.0,
+        "Split gain requirement"
+      ]
+    },
+    "LightGBM": {
+      "n_estimators": [
+        "int",
+        80,
+        200,
+        "Upper bound on boosting rounds"
+      ],
+      "learning_rate": [
+        "log",
+        0.03,
+        0.15,
+        "Moderate shrinkage"
+      ],
+      "num_leaves": [
+        "int",
+        15,
+        31,
+        "Bound leaf count; capped by selected depth"
+      ],
+      "max_depth": [
+        "int",
+        4,
+        7,
+        "Bound tree complexity"
+      ],
+      "min_child_samples": [
+        "int",
+        20,
+        100,
+        "Minimum leaf observations"
+      ],
+      "subsample": [
+        "float",
+        0.8,
+        1.0,
+        "Train bagging; subsample_freq fixed to 1"
+      ],
+      "colsample_bytree": [
+        "float",
+        0.8,
+        1.0,
+        "Feature sampling"
+      ],
+      "reg_alpha": [
+        "log",
+        0.0001,
+        1.0,
+        "L1 regularization"
+      ],
+      "reg_lambda": [
+        "log",
+        0.5,
+        5.0,
+        "L2 regularization"
+      ]
+    }
+  },
+  "scale_pos_weight": {
+    "values": [
+      1.0,
+      10.0,
+      100.0
+    ],
+    "rationale": "Controlled unweighted/moderate weighting; not automatic inverse prevalence"
+  },
+  "LightGBM_fixed": {
+    "max_delta_step": 1.0,
+    "subsample_freq": 1
+  },
+  "seed": 42,
+  "saturation": {
+    "window": 5,
+    "floor": 0.9999,
+    "tolerance": 1e-05
+  },
+  "minimum_trials": 10,
+  "maximum_trials": 20,
+  "champion_selection": "AP practical tolerance 0.0001 then full top0.1% capture, FN, FP, inference, iterations, fitting time; tuned models only"
+}
