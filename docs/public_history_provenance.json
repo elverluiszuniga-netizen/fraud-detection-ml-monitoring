@@ -15,9 +15,21 @@
       "public_commit": "db6bbdf77fb026a2acf83ac662b50e0a7fe3abb5",
       "role": "sanitized baseline"
     },
+    "22b49c526a588fbd9037439243d1c75fa08ff588": {
+      "public_commit": "57ada5ab1e8ccd0ed92a65195c4c3ac73fa7a85b",
+      "role": "included in final snapshot; intermediate tree and commit metadata not reproduced"
+    },
+    "18acda61bc935bb06c48115cebb72293eb443e6d": {
+      "public_commit": "57ada5ab1e8ccd0ed92a65195c4c3ac73fa7a85b",
+      "role": "included in final snapshot; intermediate tree and commit metadata not reproduced"
+    },
+    "c22bd9f65bc10bf6d031ac956cb454ac36b8a385": {
+      "public_commit": "57ada5ab1e8ccd0ed92a65195c4c3ac73fa7a85b",
+      "role": "included in final snapshot; intermediate tree and commit metadata not reproduced"
+    },
     "806f24b4ebe414e4dc39590057d46ca351feba08": {
-      "public_ref": "development",
-      "role": "final snapshot, not a history rewrite"
+      "public_commit": "57ada5ab1e8ccd0ed92a65195c4c3ac73fa7a85b",
+      "role": "included in final snapshot; intermediate tree and commit metadata not reproduced"
     }
   },
   "baseline_changes": [
@@ -939,5 +951,8 @@
       "original_sha256": "760d86e7ba43becfac2a0362628e7b37850cd35b45ba3dc7482c47826cecfb2a",
       "public_sha256": "760d86e7ba43becfac2a0362628e7b37850cd35b45ba3dc7482c47826cecfb2a"
     }
-  ]
+  ],
+  "public_snapshot": "57ada5ab1e8ccd0ed92a65195c4c3ac73fa7a85b",
+  "source_main_tree": "a6ee58d8c5cde8da43ce010b0df76cee8d010416",
+  "source_development_tree": "c615fedc91287275b5bb0b7425450a3f59753c3f"
 }
