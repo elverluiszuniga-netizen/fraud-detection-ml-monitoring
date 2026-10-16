@@ -1,0 +1,171 @@
+{
+  "dataset": ".\\PS_20174392719_1491204439457_log.csv",
+  "bytes": 493534783,
+  "audited_utc": "2026-10-04T02:34:30.364593+00:00",
+  "rows": 6362620,
+  "columns": [
+    "step",
+    "type",
+    "amount",
+    "nameOrig",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "nameDest",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "isFraud",
+    "isFlaggedFraud"
+  ],
+  "column_count": 11,
+  "missing_columns": [],
+  "schema": {
+    "step": "integer",
+    "type": "string",
+    "amount": "float",
+    "nameOrig": "string",
+    "oldbalanceOrg": "float",
+    "newbalanceOrig": "float",
+    "nameDest": "string",
+    "oldbalanceDest": "float",
+    "newbalanceDest": "float",
+    "isFraud": "integer",
+    "isFlaggedFraud": "integer"
+  },
+  "memory_estimate_bytes": 3852998026,
+  "memory_method": "Suma estimada de objetos string y referencias de celdas; excluye overhead de contenedores. Procesamiento streaming; no es RSS.",
+  "nulls": {
+    "step": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "type": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "amount": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "nameOrig": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "oldbalanceOrg": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "newbalanceOrig": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "nameDest": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "oldbalanceDest": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "newbalanceDest": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "isFraud": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "isFlaggedFraud": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "duplicates_exact": 0,
+  "duplicate_method": "Igualdad exacta de todos los valores de campos CSV (texto decodificado), sin normalización; filas repetidas después de la primera.",
+  "unique_entities": {
+    "origins": 6353307,
+    "destinations": 2722362
+  },
+  "target": {
+    "0": 6354407,
+    "1": 8213
+  },
+  "flagged": {
+    "0": 6362604,
+    "1": 16
+  },
+  "anomalies": {},
+  "periods": {
+    "global": {
+      "rows": 6362620,
+      "fraud": 8213,
+      "fraud_pct": 0.12908204481801522,
+      "steps": 743,
+      "step_min": 1.0,
+      "step_max": 743.0,
+      "types": {
+        "PAYMENT": 2151495,
+        "TRANSFER": 532909,
+        "CASH_OUT": 2237500,
+        "DEBIT": 41432,
+        "CASH_IN": 1399284
+      },
+      "amount": {
+        "count": 6362620,
+        "min": 0.0,
+        "max": 92445516.64,
+        "mean": 179861.90354912292,
+        "std": 603858.2314629949
+      }
+    },
+    "reference": {
+      "rows": 5787030,
+      "fraud": 4477,
+      "fraud_pct": 0.07736265407298736,
+      "steps": 400,
+      "step_min": 1.0,
+      "step_max": 400.0,
+      "types": {
+        "PAYMENT": 1949011,
+        "TRANSFER": 481440,
+        "CASH_OUT": 2048096,
+        "DEBIT": 37116,
+        "CASH_IN": 1271367
+      },
+      "amount": {
+        "count": 5787030,
+        "min": 0.0,
+        "max": 92445516.64,
+        "mean": 181350.21195315558,
+        "std": 619137.6819139244
+      }
+    },
+    "production": {
+      "rows": 575590,
+      "fraud": 3736,
+      "fraud_pct": 0.6490731249674248,
+      "steps": 343,
+      "step_min": 401.0,
+      "step_max": 743.0,
+      "types": {
+        "CASH_OUT": 189404,
+        "PAYMENT": 202484,
+        "CASH_IN": 127917,
+        "TRANSFER": 51469,
+        "DEBIT": 4316
+      },
+      "amount": {
+        "count": 575590,
+        "min": 0.0,
+        "max": 15415938.31,
+        "mean": 164898.32637890833,
+        "std": 420144.2897557277
+      }
+    }
+  },
+  "validation": {
+    "target_binary": true,
+    "step_valid": true,
+    "overlap_steps": 0,
+    "exhaustive": true
+  }
+}

@@ -1,0 +1,9 @@
+[project]
+name = "fraud-detection-ml-monitoring"
+version = "0.1.0"
+description = "Inicialización y auditoría temporal del dataset de fraude"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.uv]
+package = false

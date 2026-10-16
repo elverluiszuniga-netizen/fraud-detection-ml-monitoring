@@ -1,0 +1,3 @@
+# Preserve byte-authenticated historical reports, source and notebooks across OSes.
+# Diff detection remains automatic; only newline conversion is disabled.
+* -text
